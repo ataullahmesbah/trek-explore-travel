@@ -1,26 +1,4 @@
-// import { FaGlobeAsia } from "react-icons/fa";
 
-
-// const EventsSummary = () => {
-//     return (
-//         <div>
-
-//             {/* overview */}
-
-//             <div className="flex items-start gap-2">
-//                 <div>
-//                     <FaGlobeAsia className="text-blue-900 mt-1" />
-//                 </div>
-//            
-
-
-//             </div>
-
-//         </div>
-//     );
-// };
-
-// export default EventsSummary;
 
 
 'use client'
