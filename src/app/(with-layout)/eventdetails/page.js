@@ -78,7 +78,9 @@ const EventDetails = () => {
                 </div>
             </div>
 
-            <div className="mx-auto max-w-7xl pt-5  px-4">
+            {/* addd */}
+
+            <div className="mx-auto max-w-7xl pt-5 px-4">
                 <div className="grid grid-cols-6 gap-4 bg-white rounded-md">
                     <div className="col-span-6 md:col-span-4 space-y-5 relative">
 
