@@ -67,9 +67,6 @@ const EventDetails = () => {
                                     </p>
                                 </div>
 
-
-
-
                             </div>
                         </div>
 
