@@ -18,7 +18,7 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import gadgetsData from '/public/gadgets.json'; // Adjust the path accordingly
 
-import GadgetsNavbar from '../../GadgetsNavbar/GadgetsNavbar';
+
 
 
 import { useTheme } from '@mui/material/styles';
@@ -49,7 +49,7 @@ const GadgetsHome = () => {
     return (
         <div>
             {/* E-commerce Navbar */}
-            <GadgetsNavbar />
+           
 
             {/* Second AppBar Start */}
             <AppBar position="static" sx={{ backgroundColor: 'rgb(12 74 110)' }}>

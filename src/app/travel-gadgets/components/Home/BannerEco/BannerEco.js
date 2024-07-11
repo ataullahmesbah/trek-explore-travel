@@ -13,7 +13,7 @@ const BannerEco = () => {
                 alt="Banner"
                 placeholder="blur"
                 blurDataURL="https://i.ibb.co/svM1TLR/image.png" // Update this if you have a separate low-res image
-                className="rounded-lg"
+                className=""
             />
             <div className="absolute inset-0 text-center bg-black bg-opacity-50 flex flex-col justify-center items-center">
                 <h1 className="text-4xl md:text-6xl text-white font-bold mb-4">PLAN YOUR ADVENTURE</h1>
