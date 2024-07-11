@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 import EventsSummary from '../../components/Events/EventsSummary/EventsSummary';
+import EventItinerary from '../../components/Events/EventItinerary/EventItinerary';
+import EventsPolicy from '../../components/Events/EventsPolicy/EventsPolicy';
 
 const EventTabs = () => {
     const [activeTab, setActiveTab] = useState('summary'); // State to manage active tab
@@ -22,11 +24,16 @@ const EventTabs = () => {
 
             {/* Content for each tab */}
             <div className="py-4">
-                {activeTab === 'summary' && <div className="py-4">
+                {activeTab === 'summary' && <div id="summary" className="py-4">
                     <EventsSummary />
+                    
                 </div>}
-                {activeTab === 'itinerary' && <div className="py-4">Itinerary content goes here</div>}
-                {activeTab === 'policies' && <div className="py-4">Policies content goes here</div>}
+                {activeTab === 'itinerary' && <div className="py-4">
+                    <EventItinerary />
+                </div>}
+                {activeTab === 'policies' && <div className="py-4">
+                    <EventsPolicy />
+                    </div>}
                 {activeTab === 'options' && <div className="py-4">Options content goes here</div>}
             </div>
         </div>

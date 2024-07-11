@@ -6,13 +6,11 @@ import { FaBrush, FaRegClock, FaTimes } from "react-icons/fa";
 
 const EventDetails = () => {
 
-
     return (
-        <div className="bg-blue-50">
+        <div className="bg-blue-50 min-h-screen">
             <div className="mx-auto max-w-7xl pt-20 px-4">
 
                 {/* Section --- 1 start */}
-
                 <div className="space-y-5">
                     <h1 className="text-center text-4xl">Events</h1>
                     <p className="text-center">Home - Events - Kiwi Link South East Asia 2024</p>
@@ -21,8 +19,9 @@ const EventDetails = () => {
                     </div>
                 </div>
 
-                {/* Section --- 2 start */}
+                
 
+                {/* Section --- 2 start */}
                 <div className="container mx-auto mt-5 rounded-md bg-white">
                     <div className="grid grid-cols-6 gap-4">
                         {/* First part with 4/6 width */}
@@ -37,7 +36,6 @@ const EventDetails = () => {
                                     quality={100}
                                     blurDataURL="data"
                                     className="rounded-s-md"
-
                                 />
                             </div>
                         </div>
@@ -70,43 +68,29 @@ const EventDetails = () => {
                             </div>
                         </div>
 
+
                     </div>
                 </div>
             </div>
 
             
 
-            {/* addd */}
-
+            {/* Section with tabs and form */}
             <div className="mx-auto max-w-7xl pt-5 px-4">
                 <div className="grid grid-cols-6 gap-4 bg-white rounded-md">
-                    <div className="col-span-6 md:col-span-4 space-y-5 relative">
-
-                        {/* First part with 4/6 width */}
-
-                        <div className="relative w-full h-0 pb-[66.67%]">
-
-
+                    <div className="col-span-6 md:col-span-4 space-y-5">
+                        {/* Event Tabs */}
+                        <div className="w-full">
                             <EventTabs />
-
-
-
-
                         </div>
                     </div>
 
-
-                    {/* Second part with 2/6 width */}
+                    {/* Tour Consultation Form */}
                     <div className="col-span-6 md:col-span-2 space-y-5 px-2">
-
                         <TourConsultationForm />
-
                     </div>
-
-
                 </div>
             </div>
-
         </div>
     );
 };
