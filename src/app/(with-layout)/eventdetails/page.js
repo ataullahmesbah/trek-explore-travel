@@ -70,10 +70,11 @@ const EventDetails = () => {
                             </div>
                         </div>
 
-
                     </div>
                 </div>
             </div>
+
+            
 
             {/* addd */}
 
