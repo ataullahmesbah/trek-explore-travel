@@ -14,7 +14,7 @@ export default function BannerDemo() {
     }, []);
   
     return (
-      <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
+      <div className="h-56 sm:h-64 xl:h-80 2xl:h-96 pb-36">
         <Carousel leftControl="left" rightControl="right">
           {slides.map((slide, index) => (
             <div key={index} className="relative h-full w-full">

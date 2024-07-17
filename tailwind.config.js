@@ -18,3 +18,4 @@ module.exports = {
     require('daisyui', 'flowbite/plugin'),
   ],
 };
+

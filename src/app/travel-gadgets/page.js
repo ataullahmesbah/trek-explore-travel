@@ -3,7 +3,8 @@
 import BannerEco from "./components/Home/BannerEco/BannerEco";
 import GadgetsNavbar from "./components/GadgetsNavbar/GadgetsNavbar";
 import FeatureSection from "./components/Home/FeatureSection/FeatureSection";
-import BannerDemo from "./components/Home/BannerDemo/BannerDemo";
+import AllCategories from "./components/Shop/AllCategories/AllCategories";
+import GadgetBanner from "./components/Home/GadgetBanner/GadgetBanner";
 
 
 const TravelGadgets = () => {
@@ -13,7 +14,8 @@ const TravelGadgets = () => {
             <GadgetsNavbar />
             <BannerEco />
             <FeatureSection />
-            <BannerDemo />
+            <AllCategories />
+            <GadgetBanner/>
 
 
         </div>

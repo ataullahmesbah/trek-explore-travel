@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Backpack",
+        "description": "Join us for an exhilarating mountain hiking experience.",
+        "category": "Backpack",
+        "image": "https://i.ibb.co/Jpc3b47/image.png"
+    },
+    {
+        "title": "Electronics",
+        "description": "Help us keep the beaches clean and enjoy a day by the sea.",
+        "category": "Electronics",
+        "image": "https://i.ibb.co/Jpc3b47/image.png"
+    },
+    {
+        "title": "City Marathon",
+        "description": "Participate in our annual city marathon event.",
+        "category": "Tents",
+        "image": "https://i.ibb.co/Jpc3b47/image.png"
+    },
+    {
+        "title": "City Marathon",
+        "description": "Participate in our annual city marathon event.",
+        "category": "Climbing Gear",
+        "image": "https://i.ibb.co/Jpc3b47/image.png"
+    },
+    {
+        "title": "City Marathon",
+        "description": "Participate in our annual city marathon event.",
+        "category": "Apparel",
+        "image": "https://i.ibb.co/Jpc3b47/image.png"
+    },
+    {
+        "title": "City Marathon",
+        "description": "Participate in our annual city marathon event.",
+        "category": "Tools & Kit",
+        "image": "https://i.ibb.co/Jpc3b47/image.png"
+    }
+]

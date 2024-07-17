@@ -12,19 +12,19 @@ const FeatureSection = () => {
                         </div>
                     </div>
                     <div className="flex items-center space-x-4">
-                        <FaBoxOpen className="text-purple-600 text-4xl" />
+                        <FaBoxOpen className="text-gray-500 text-4xl" />
                         <div>
                             <h3 className="text-lg font-medium text-gray-900">Free shipping on orders over $50</h3>
                         </div>
                     </div>
                     <div className="flex items-center space-x-4">
-                        <FaTags className="text-purple-600 text-4xl" />
+                        <FaTags className="text-gray-500 text-4xl" />
                         <div>
                             <h3 className="text-lg font-medium text-gray-900">Low prices guaranteed</h3>
                         </div>
                     </div>
                     <div className="flex items-center space-x-4">
-                        <FaClock className="text-purple-600 text-4xl" />
+                        <FaClock className="text-gray-500 text-4xl" />
                         <div>
                             <h3 className="text-lg font-medium text-gray-900">Available to you 24/7</h3>
                         </div>
