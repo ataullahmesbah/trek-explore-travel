@@ -6,6 +6,7 @@ import FeatureSection from "./components/Home/FeatureSection/FeatureSection";
 import AllCategories from "./components/Shop/AllCategories/AllCategories";
 import GadgetBanner from "./components/Home/GadgetBanner/GadgetBanner";
 import EcommerceNavbar from "./components/EcommerceNavbar/EcommerceNavbar";
+import LatestProducts from "./components/products/LatestProducts/LatestProducts";
 
 
 const TravelGadgets = () => {
@@ -13,11 +14,12 @@ const TravelGadgets = () => {
         <div>
 
             <GadgetsNavbar />
-            <EcommerceNavbar/>
+            <EcommerceNavbar />
             <BannerEco />
             <FeatureSection />
             <AllCategories />
-            <GadgetBanner/>
+            <GadgetBanner />
+            <LatestProducts />
 
 
         </div>

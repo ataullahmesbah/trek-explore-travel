@@ -2,11 +2,11 @@ import { FaTruck, FaBoxOpen, FaTags, FaClock } from 'react-icons/fa';
 
 const FeatureSection = () => {
     return (
-        <div className="py-12 bg-gray-100">
+        <div className="py-12 bg-blue-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div className="flex items-center space-x-4">
-                        <FaTruck className="text-gray-500  text-4xl" />
+                    <div className="flex items-center space-x-4 ">
+                        <FaTruck className="text-gray-500  text-4xl shadow-2xl" />
                         <div>
                             <h3 className="text-lg font-medium text-gray-900">Curb-side pickup</h3>
                         </div>
