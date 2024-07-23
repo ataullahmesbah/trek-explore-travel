@@ -37,8 +37,10 @@ const TravelBlogs = () => {
 
         <div className="container max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
 
-            <h1 className="text-3xl font-semibold mb-6 text-center">Featured Blog Posts</h1>
-            <p className="text-center mb-12 text-base sm:text-lg md:text-xl text-gray-700">A small sampling of expert advice and insight from Trek Explore Travel blog.</p>
+            <div className='text-center space-y-5 lg:space-y-6 mb-12'>
+            <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold">Featured Blog Posts</h1>
+            <p className="text-base sm:text-lg md:text-xl text-gray-700">A small sampling of expert advice and insight from Trek Explore Travel blog.</p>
+            </div>
 
 
 
@@ -57,13 +59,13 @@ const TravelBlogs = () => {
                             className="w-full h-48 object-cover transform transition-transform duration-300 hover:scale-105"
                         />
                         <div className="p-6">
-                            <h2 className="text-2xl font-bold mb-2">{blog.title}</h2>
+                            <h2 className="text-lg font-semibold mb-2">{blog.title}</h2>
                             <p className="text-gray-600 mb-4">{new Date(blog.date).toLocaleDateString()}</p>
                             <p className="text-gray-700 mb-4">
-                                {blog.description.slice(0, 40)}...
+                                {blog.description.slice(0, 100)}...
                             </p>
                             <Link href={`/blog/${blog._id}`} legacyBehavior>
-                                <a className="text-sky-900 bottom-0 left-0 font-semibold hover:underline">Read More</a>
+                                <a className="text-sky-900 bottom-0 left-0 hover:underline">Read More</a>
                             </Link>
                         </div>
                     </div>

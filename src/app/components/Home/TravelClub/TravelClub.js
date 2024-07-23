@@ -17,7 +17,7 @@ const TravelClub = () => {
                 className="w-full h-full"
             />
             <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-center">
-                <div className="flex flex-col md:flex-row justify-between items-center p-4 sm:p-8 md:p-16 max-w-7xl mx-auto">
+                <div className="flex flex-col md:flex-row justify-between items-center p-1 sm:p-8 md:p-16 max-w-7xl mx-auto">
                     <div className="text-white md:w-full">
                         <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4 text-center md:text-left">Join Our Travel Club</h1>
                         <p className="text-base sm:text-lg md:text-xl mb-6 text-center md:text-left">Become a member of our exclusive travel club and enjoy amazing benefits and unforgettable experiences.</p>

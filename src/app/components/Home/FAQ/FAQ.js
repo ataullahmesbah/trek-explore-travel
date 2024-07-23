@@ -30,8 +30,12 @@ const FAQ = () => {
     };
 
     return (
-        <div className="container max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-16 mb-10">
-            <h2 className="title">Frequently Asked Questions</h2>
+        <div className="container max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-16">
+
+            <div className='text-center space-y-5 lg:space-y-6 mb-12'>
+                <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold">Frequently Asked Questions</h1>
+            </div>
+           
             <div className="accordion">
                 <div className="accordion-item border-b border-gray-200">
                     <button

@@ -27,8 +27,13 @@ const LatestStories = () => {
         <div>
             <ContainerPage>
                 {/* Latest Stories */}
-                <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-                    <h1 className="text-3xl font-semibold mb-6 text-center">Latest Stories</h1>
+                <div className="max-w-7xl mx-auto mt-16 mb-10 px-4 sm:px-6 lg:px-8">
+
+                <div className='text-center space-y-5 lg:space-y-6 mb-6'>
+                <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold">Latest Stories</h1>
+            </div>
+
+
                     <div className="flex items-center justify-center mb-9">
                         <div className="border-b-2 w-1/3"></div>
                         <GiDetour className="mx-4 text-2xl text-gray-500" />
@@ -48,7 +53,7 @@ const LatestStories = () => {
                                     className="w-full h-48 object-cover"
                                 />
                                 <div className="p-4">
-                                    <h2 className="text-2xl font-semibold mb-2">{story.title}</h2>
+                                    <h2 className="text-xl font-semibold mb-2">{story.title}</h2>
                                     <p className="text-gray-700">{story.description}</p>
                                 </div>
                             </div>

@@ -19,7 +19,7 @@ const EventDetails = () => {
                     </div>
                 </div>
 
-                
+
 
                 {/* Section --- 2 start */}
                 <div className="container mx-auto mt-5 rounded-md bg-white">
@@ -73,7 +73,7 @@ const EventDetails = () => {
                 </div>
             </div>
 
-            
+
 
             {/* Section with tabs and form */}
             <div className="mx-auto max-w-7xl pt-5 px-4">

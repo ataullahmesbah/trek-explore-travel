@@ -11,14 +11,20 @@ const CleanSafeAdventures = () => {
     ];
 
     return (
-        <div className="bg-gray-50 py-16 md:py-10">
+        <div className="bg-gray-50 py-10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h1 className="title">
-                    Clean & Safe Adventures
+
+            <div className='text-center space-y-5 lg:space-y-6 mb-12'>
+            <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold">Clean & Safe Adventures</h1>
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 px-3">Our mission is to safeguard and maintain the stunning landscapes and exhilarating adventure spots we cherish. By keeping these areas clean and secure, we pledge to protect their natural beauty and ensure they remain a source of joy and inspiration for future generations.</p>
+            </div>
+
+                {/* <h1 className="title">
+                    
                 </h1>
                 <p className="text-base sm:text-lg md:text-xl leading-relaxed mb-8 sm:mb-12 text-gray-700 lg:px-4">
-                    Our mission is to safeguard and maintain the stunning landscapes and exhilarating adventure spots we cherish. By keeping these areas clean and secure, we pledge to protect their natural beauty and ensure they remain a source of joy and inspiration for future generations.
-                </p>
+                    
+                </p> */}
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 mb-10 sm:mb-12 lg:mb-16">
                     {images.map((url, index) => (

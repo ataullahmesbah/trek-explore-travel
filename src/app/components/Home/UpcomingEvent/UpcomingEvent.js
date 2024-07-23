@@ -24,8 +24,14 @@ const UpcomingEvents = () => {
     return (
         <div className="bg-gray-50 py-8">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h1 className="title">Upcoming Events</h1>
-                <p className="text-center mb-12 text-base sm:text-lg md:text-xl text-gray-700">Discover events throughout Taranaki and all around the world</p>
+
+            <div className='text-center space-y-5 lg:space-y-6 mb-12'>
+            <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold">Upcoming Events</h1>
+            <p className="text-base sm:text-lg md:text-xl text-gray-700">Discover events throughout Taranaki and all around the world</p>
+            </div>
+
+                {/* <h1 className="title"></h1>
+                <p className="text-center mb-12 text-base sm:text-lg md:text-xl text-gray-700"></p> */}
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     <div className="col-span-1 md:col-span-2">
                         <div className="relative w-full h-64 group">
