@@ -6,7 +6,10 @@ import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [subMenuOpen, setSubMenuOpen] = useState({ destination: false, gadgets: false });
+  const [subMenuOpen, setSubMenuOpen] = useState({
+    destination: false,
+    customer: false,
+  });
 
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
@@ -20,17 +23,21 @@ const Navbar = () => {
   };
 
   const handleMouseEnter = (menu) => {
-    setSubMenuOpen((prevState) => ({
-      ...prevState,
-      [menu]: true,
-    }));
+    if (window.innerWidth >= 768) {
+      setSubMenuOpen((prevState) => ({
+        ...prevState,
+        [menu]: true,
+      }));
+    }
   };
 
   const handleMouseLeave = (menu) => {
-    setSubMenuOpen((prevState) => ({
-      ...prevState,
-      [menu]: false,
-    }));
+    if (window.innerWidth >= 768) {
+      setSubMenuOpen((prevState) => ({
+        ...prevState,
+        [menu]: false,
+      }));
+    }
   };
 
   return (
@@ -41,24 +48,41 @@ const Navbar = () => {
         </Link>
         <div className="hidden md:flex space-x-6 items-center">
           <Link href="/" legacyBehavior><a>Home</a></Link>
+
           <div
-            className="relative"
+            className="relative bg-fixed"
             onMouseEnter={() => handleMouseEnter('destination')}
             onMouseLeave={() => handleMouseLeave('destination')}
           >
             <button
-              className="flex items-center focus:outline-none"
+              className="flex items-center focus:outline-none text-white"
               onClick={() => handleSubMenuToggle('destination')}
             >
               Destination
               {subMenuOpen.destination ? <FaChevronUp className="ml-1" /> : <FaChevronDown className="ml-1" />}
             </button>
             {subMenuOpen.destination && (
-              <div className="absolute left-0 bg-sky-800 shadow-2xl bg-opacity-60  w-full text-white p-4 rounded mt-1 z-40">
-                <Link href="/destination/bangladesh" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">Odekha Banlar Khoje</a></Link>
-                <Link href="/destination/nepal" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">Nepal</a></Link>
-                <Link href="/destination/india" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">India</a></Link>
-                <Link href="/destination/maldives" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">Maldives</a></Link>
+              <div className="absolute left-0 bg-white shadow-xl w-48 text-black p-4 rounded mt-1 z-40">
+                <div className="relative">
+                  <Link href="/destination/bangladesh" legacyBehavior>
+                    <a className="block py-1 hover:bg-gray-300 rounded-md">Odekha Banlar Khoje</a>
+                  </Link>
+                </div>
+                <div className="relative">
+                  <Link href="/destination/nepal" legacyBehavior>
+                    <a className="block py-1 hover:bg-gray-300 rounded-md">Nepal</a>
+                  </Link>
+                </div>
+                <div className="relative">
+                  <Link href="/destination/india" legacyBehavior>
+                    <a className="block py-1 hover:bg-gray-300 rounded-md">India</a>
+                  </Link>
+                </div>
+                <div className="relative">
+                  <Link href="/destination/maldives" legacyBehavior>
+                    <a className="block py-1 hover:bg-gray-300 rounded-md">Maldives</a>
+                  </Link>
+                </div>
               </div>
             )}
           </div>
