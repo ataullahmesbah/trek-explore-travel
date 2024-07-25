@@ -35,11 +35,11 @@ const TravelBlogs = () => {
     return (
 
 
-        <div className="container max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <div className="container max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
 
             <div className='text-center space-y-5 lg:space-y-6 mb-12'>
-            <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold">Featured Blog Posts</h1>
-            <p className="text-base sm:text-lg md:text-xl text-gray-700">A small sampling of expert advice and insight from Trek Explore Travel blog.</p>
+            <h1 className="title">Featured Blog Posts</h1>
+            <p className="subtitle">A small sampling of expert advice and insight from Trek Explore Travel blog.</p>
             </div>
 
 

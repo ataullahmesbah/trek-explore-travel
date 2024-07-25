@@ -10,39 +10,51 @@ body,
 }
 
 
-/* Define a global class for titles */
+
+/* Define the base title styles */
 .title {
-  font-size: 2rem;
-  /* Default font size */
-  margin-bottom: 1.5rem;
-  /* Bottom margin */
-  text-align: center;
-  /* Center-align text */
+  font-size: 1.25rem;
+  /* text-xl */
+  font-weight: 600;
+  /* font-semibold */
 }
 
-/* Responsive font sizes */
-@media (min-width: 640px) {
-  .title {
-    font-size: 2.5rem;
-    /* Increase font size on small screens and up */
-  }
-}
-
+/* Medium screens (min-width: 768px) */
 @media (min-width: 768px) {
   .title {
-    font-size: 2.5rem;
-    /* Increase font size on medium screens and up */
+    font-size: 1.5rem;
+    /* text-2xl */
   }
 }
 
+/* Large screens (min-width: 1024px) */
 @media (min-width: 1024px) {
   .title {
-    font-size: 2.5rem;
-    /* Increase font size on large screens and up */
+    font-size: 1.875rem;
+    /* text-3xl */
   }
 }
 
+/* Define the base subtitle styles */
+.subtitle {
+  font-size: 1rem;
+  /* text-base */
+  color: #4a5568;
+  /* text-gray-700 */
+}
 
+/* Small screens (min-width: 640px) */
+@media (min-width: 640px) {
+  .subtitle {
+    font-size: 1.125rem;
+    /* text-lg */
+  }
+}
 
-
-
+/* Medium screens (min-width: 768px) */
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: 1.25rem;
+    /* text-xl */
+  }
+}

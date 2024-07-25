@@ -41,7 +41,7 @@ const AdventureStories = () => {
 
             {/* Latest Stories */}
             <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-                <h1 className="text-3xl font-semibold mb-6 text-center">Latest Stories</h1>
+                <h1 className="title text-center mb-3">Latest Stories</h1>
                 <div className="flex items-center justify-center mb-9">
                     <div className="border-b-2 w-1/3"></div>
                     <GiDetour className="mx-4 text-2xl text-gray-500" />
@@ -78,7 +78,7 @@ const AdventureStories = () => {
 
             {/* All Stories */}
             <div className="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
-                <h2 className="text-3xl font-semibold mb-6 text-center">All Stories</h2>
+                <h2 className="title mb-6 text-center">All Stories</h2>
                 <div className="flex justify-center mt-4 mb-10">
                     <div className="border-b-2 w-3/4"></div>
                 </div>

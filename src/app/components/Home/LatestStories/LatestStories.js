@@ -30,7 +30,7 @@ const LatestStories = () => {
                 <div className="max-w-7xl mx-auto mt-16 mb-10 px-4 sm:px-6 lg:px-8">
 
                 <div className='text-center space-y-5 lg:space-y-6 mb-6'>
-                <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold">Latest Stories</h1>
+                <h1 className="title">Latest Stories</h1>
             </div>
 
 
@@ -39,6 +39,7 @@ const LatestStories = () => {
                         <GiDetour className="mx-4 text-2xl text-gray-500" />
                         <div className="border-b-2 w-1/3"></div>
                     </div>
+                    
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
                         {latestStories.map((story, index) => (
                             <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md">

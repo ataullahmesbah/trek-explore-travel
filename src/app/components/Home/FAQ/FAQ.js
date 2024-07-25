@@ -33,7 +33,7 @@ const FAQ = () => {
         <div className="container max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-16">
 
             <div className='text-center space-y-5 lg:space-y-6 mb-12'>
-                <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold">Frequently Asked Questions</h1>
+                <h1 className="title">Frequently Asked Questions</h1>
             </div>
            
             <div className="accordion">

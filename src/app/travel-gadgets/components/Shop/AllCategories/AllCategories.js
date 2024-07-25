@@ -16,8 +16,8 @@ const AllCategories = () => {
     return (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
             <div className="container mx-auto m-12 space-y-4">
-                <p className="text-center text-base sm:text-lg md:text-xl text-gray-700">Choose your desired Collection</p>
-                <h1 className="text-3xl font-semibold text-center">Shop By Category</h1>
+                <p className="subtitle text-center">Choose your desired Collection</p>
+                <h1 className="title text-center">Shop By Category</h1>
             </div>
             <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-6">
                 {categories.slice(0, 6).map((category, index) => (
