@@ -6,15 +6,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
 
-// Install Swiper modules
-SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 const products = [
   {
     id: 1,
-    name: "Adidas Adi Trend 2.0 Shoe - Kids",
+    name: "Adidas Adi Trend 2.0 Shoe - Kids Adidas Adi Trend 2.0 Shoe - ...",
     price: 5592,
     originalPrice: 8790,
     image: "https://i.ibb.co/Jpc3b47/image.png",
@@ -75,7 +72,7 @@ const LatestProducts = () => {
     <div className="container mx-auto mb-10 px-4 sm:px-6 lg:px-8 py-20 group relative">
       <div className="text-center mb-12 flex gap-3 justify-between items-center">
         <p className="border-t border-black flex-grow"></p>
-        <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold ">New Arrivals</h1>
+        <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold">New Arrivals</h1>
         <p className="border-t border-black flex-grow"></p>
       </div>
       <Swiper
@@ -106,56 +103,48 @@ const LatestProducts = () => {
           const discountedPrice = product.originalPrice * (1 - product.discount / 100);
           return (
             <SwiperSlide key={product.id}>
-
-              {/* card started */}
-              <div className="relative border border-gray-300 rounded-lg p-2 flex flex-col justify-between">
-                <div className=" absolute top-0 right-0 bg-red-500 text-white px-2 py-1 rounded-bl-lg text-xs">
+              <div className="w-72 h-[460px] border border-gray-300 rounded-lg p-4 flex flex-col justify-between">
+                <div className="absolute top-0 right-0 bg-red-500 text-white px-2 py-1 rounded-bl-lg text-xs">
                   {product.discount}% OFF
                 </div>
+                <div className="w-full h-48 mb-4">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    width={400}
+                    height={400}
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+                <h2 className="mt-4 px-2 text-black font-semibold  bottom-0">{product.name}</h2>
 
-
-
-
-
-                <Image
-                  src={product.image}
-                  alt={product.name}
-                  width={400}
-                  height={400}
-                  className="object-contain"
-                />
-
-
-                <div className=' px-2 space-y-2 flex-grow flex flex-col justify-between'>
-                  <div>
-                    <h2 className=" mt-4 text-sm sm:text-base md:text-lg font-medium">{product.name}</h2>
+                <div className='px-2 space-y-2 flex-grow flex flex-col justify-between'>
+                  <div className='flex gap-5 top-0 bottom-0 text-center pt-5'>
+                    
                     <p className="text-sm sm:text-base md:text-lg text-gray-600 line-through">
                       ৳ {product.originalPrice}
                     </p>
-                    <p className="text-sm sm:text-base md:text-lg text-gray-600">৳ {discountedPrice.toFixed(0)}</p>
+                    <p className="text-sm sm:text-base md:text-lg font-semibold text-gray-800">৳ {discountedPrice.toFixed(0)}</p>
                   </div>
-                  <div className='text-center py-3'>
+                  <div className=' top-0 bottom-0 text-center'>
                     <Link href={`/products/${product.id}`} legacyBehavior>
-                      <a className="text-white bg-sky-950 px-5 p-2 rounded-md hover:underline">Add to Cart</a>
+                      <a className="text-white bottom-0 bg-sky-950 px-5 p-2 rounded-md hover:underline">Add to Cart</a>
                     </Link>
                   </div>
                 </div>
               </div>
-
-
-              {/* card ending */}
-
             </SwiperSlide>
           );
         })}
         <SwiperSlide>
-          <div className="flex items-center justify-center w-full h-full">
+          <div className="flex items-center justify-center  text-center-38 pt-44">
             <Link href="/products" legacyBehavior>
               <a className="text-blue-500 hover:underline text-center">View All</a>
             </Link>
           </div>
         </SwiperSlide>
       </Swiper>
+
       <div className="absolute top-1/2 transform -translate-y-1/2 left-0 ml-2 opacity-0 group-hover:opacity-100 transition-opacity">
         <button className="custom-prev bg-gray-800 text-white px-2 py-1 rounded-lg">
           &lt;
