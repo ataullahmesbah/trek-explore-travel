@@ -22,9 +22,9 @@ const LatestProducts = () => {
   }, []);
 
   return (
-    <div className="container mx-auto mb-10 px-4 sm:px-6 lg:px-8 py-20 group relative">
-      <div className="text-center mb-12 flex gap-3 justify-between items-center">
-        <p className="border-t border-black flex-grow"></p>
+    <div className="container mx-auto mb-10 px-4 sm:px-6 lg:px-8 py-10 group relative">
+      <div className="text-center mb-12 flex gap-3 justify-between items-center lg:px-8">
+        <p className="border-t  border-black flex-grow"></p>
         <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold">New Arrivals</h1>
         <p className="border-t border-black flex-grow"></p>
       </div>
