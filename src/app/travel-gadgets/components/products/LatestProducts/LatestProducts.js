@@ -38,50 +38,55 @@ const LatestProducts = () => {
         autoplay={{ delay: 3000 }}
         pagination={{ clickable: true }}
         breakpoints={{
+          425: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
           640: {
             slidesPerView: 2,
-            spaceBetween: 20,
+            spaceBetween: 10,
           },
           768: {
             slidesPerView: 3,
-            spaceBetween: 40,
+            spaceBetween: 20,
           },
           1024: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+          1440: {
             slidesPerView: 5,
             spaceBetween: 30,
-          },
+          }
+
         }}
       >
         {products.map((product) => {
           const discountedPrice = product.originalPrice * (1 - product.discount / 100);
           return (
             <SwiperSlide key={product.id}>
-              <div className="w-72 h-[460px] border border-gray-300 rounded-lg p-4 flex flex-col justify-between relative">
+              <div className=" h-[400px] border border-gray-300 rounded-lg p-1 flex flex-col justify-between relative">
                 <div className="absolute top-0 right-0 bg-red-500 text-white px-2 py-1 rounded-bl-lg text-xs">
                   {product.discount}% OFF
                 </div>
-                <div className="w-full h-48 mb-4">
+                <div className="w-full h-48 mb-2 flex justify-center items-center">
                   <Image
                     src={product.image}
                     alt={product.name}
                     width={400}
                     height={400}
-                    className="object-cover w-full h-full"
+                    className="object-contain w-full h-full"
                   />
-
-                  
                 </div>
-                <h2 className="mt-4 px-2 text-black font-semibold">{product.name}</h2>
+                <h2 className="mt-2 px-2 text-black font-semibold">{product.name}</h2>
                 <div className='px-2 space-y-2 flex-grow flex flex-col justify-between'>
-                  <div className='flex gap-5 top-0 bottom-0 text-center pt-5'>
-
-                  <div className='flex gap-5 text-center pt-5'>
+                  <div className='flex mt-auto mb-5 md:gap-2 gap-5 text-center pt-5'>
                     <p className="text-sm sm:text-base md:text-lg text-gray-600 line-through">
                       ৳ {product.originalPrice}
                     </p>
                     <p className="text-sm sm:text-base md:text-lg font-semibold text-gray-800">৳ {discountedPrice.toFixed(0)}</p>
                   </div>
-                  <div className='text-center'>
+                  <div className='mt-auto pb-2 text-center'>
                     <Link href={`/products/${product.id}`} legacyBehavior>
                       <a className="text-white bg-sky-950 px-5 p-2 rounded-md hover:underline">Add to Cart</a>
                     </Link>
