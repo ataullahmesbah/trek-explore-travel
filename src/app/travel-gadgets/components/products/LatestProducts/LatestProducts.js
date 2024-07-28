@@ -115,12 +115,14 @@ const LatestProducts = () => {
                     height={400}
                     className="object-cover w-full h-full"
                   />
+
+                  
                 </div>
                 <h2 className="mt-4 px-2 text-black font-semibold  bottom-0">{product.name}</h2>
 
                 <div className='px-2 space-y-2 flex-grow flex flex-col justify-between'>
                   <div className='flex gap-5 top-0 bottom-0 text-center pt-5'>
-                    
+
                     <p className="text-sm sm:text-base md:text-lg text-gray-600 line-through">
                       ৳ {product.originalPrice}
                     </p>
