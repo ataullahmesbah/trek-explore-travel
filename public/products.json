@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "name": "Adidas Adi Trend 2.0 Shoe - Kids Adidas Adi Trend 2.0 Shoe - ...",
+        "price": 5592,
+        "originalPrice": 9790,
+        "image": "https://i.ibb.co/Jpc3b47/image.png",
+        "discount": 25
+    },
+    {
+        "id": 2,
+        "name": "Adidas Adi Trend 2.0 Shoe - Kids",
+        "price": 5592,
+        "originalPrice": 6990,
+        "image": "https://i.ibb.co/Jpc3b47/image.png",
+        "discount": 25
+    },
+    {
+        "id": 3,
+        "name": "Adidas Prohiker - Men",
+        "price": 11200,
+        "originalPrice": 14000,
+        "image": "https://i.ibb.co/Jpc3b47/image.png",
+        "discount": 20
+    },
+    {
+        "id": 4,
+        "name": "Adidas Ford Up - Men",
+        "price": 11200,
+        "originalPrice": 14000,
+        "image": "https://i.ibb.co/Jpc3b47/image.png",
+        "discount": 20
+    },
+    {
+        "id": 5,
+        "name": "Adidas Epik Comfort Shoe - Men",
+        "price": 11200,
+        "originalPrice": 14000,
+        "image": "https://i.ibb.co/Jpc3b47/image.png",
+        "discount": 27
+    },
+    {
+        "id": 6,
+        "name": "Adidas Adi Trend 2.0 Shoe - Kids",
+        "price": 5592,
+        "originalPrice": 6990,
+        "image": "https://i.ibb.co/Jpc3b47/image.png",
+        "discount": 25
+    },
+    {
+        "id": 7,
+        "name": "Adidas Prohiker - Men",
+        "price": 11200,
+        "originalPrice": 14000,
+        "image": "https://i.ibb.co/Jpc3b47/image.png",
+        "discount": 20
+    }
+]
