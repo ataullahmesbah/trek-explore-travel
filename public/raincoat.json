@@ -1,0 +1,56 @@
+[
+    {
+        "_id": "5421gbxsay8134769j",
+        "name": "Waterproof Rain Jacket",
+        "price": 5592,
+        "originalPrice": 9790,
+        "image": "https://i.ibb.co/5WW3jQ8/image.png",
+        "discount": 25,
+        "category": "rain_coat"
+    },
+    {
+        "_id": "5432gbxsay8134769k",
+        "name": "Hooded Raincoat",
+        "price": 6499,
+        "originalPrice": 8999,
+        "image": "https://i.ibb.co/b17H23P/image.png",
+        "discount": 28,
+        "category": "rain_coat"
+    },
+    {
+        "_id": "5443gbxsay8134769l",
+        "name": "Long Waterproof Trench Coat",
+        "price": 7890,
+        "originalPrice": 12990,
+        "image": "https://i.ibb.co/Qfmg233/image.png",
+        "discount": 39,
+        "category": "rain_coat"
+    },
+    {
+        "_id": "5454gbxsay8134769m",
+        "name": "Lightweight Rain Poncho",
+        "price": 3999,
+        "originalPrice": 5999,
+        "image": "https://i.ibb.co/9vNC878/image.png",
+        "discount": 33,
+        "category": "rain_coat"
+    },
+    {
+        "_id": "5465gbxsay8134769n",
+        "name": "Breathable Rain Shell",
+        "price": 8999,
+        "originalPrice": 13999,
+        "image": "https://i.ibb.co/tmXCTh8/image.png",
+        "discount": 36,
+        "category": "rain_coat"
+    },
+    {
+        "_id": "5476gbxsay8134769o",
+        "name": "Classic Rain Slicker",
+        "price": 4799,
+        "originalPrice": 6799,
+        "image": "https://i.ibb.co/CnFGgV2/image.png",
+        "discount": 29,
+        "category": "rain_coat"
+    }
+]

@@ -7,6 +7,7 @@ import AllCategories from "./components/Shop/AllCategories/AllCategories";
 import GadgetBanner from "./components/Home/GadgetBanner/GadgetBanner";
 import EcommerceNavbar from "./components/EcommerceNavbar/EcommerceNavbar";
 import LatestProducts from "./components/products/LatestProducts/LatestProducts";
+import RainCoat from "./components/products/RainCoat/RainCoat";
 
 
 const TravelGadgets = () => {
@@ -20,6 +21,7 @@ const TravelGadgets = () => {
             <AllCategories />
             <GadgetBanner />
             <LatestProducts />
+            <RainCoat />
 
 
         </div>

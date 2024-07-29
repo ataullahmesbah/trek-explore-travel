@@ -1,8 +1,12 @@
-import { Inter } from "next/font/google";
-import "./globals.css";
-import TravelGadgets from "./travel-gadgets/page";
+import { Inter, Poppins, Roboto } from 'next/font/google';
+import './globals.css';
 
-const inter = Inter({ subsets: ["latin"] });
+
+const inter = Inter({ subsets: ['latin'] });
+export const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] }); // Add weights as needed
+const roboto = Roboto({ subsets: ['latin'], weight: ['400', '700'] }); // Add weights as needed
+
+
 
 export const metadata = {
   title: 'Trek Explore Travel - Plan Your Adventure Tour Now',
@@ -36,11 +40,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         {children}
-
-
       </body>
-
-
     </html>
   );
 }
