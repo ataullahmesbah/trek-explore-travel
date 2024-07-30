@@ -1,50 +1,51 @@
 [
     {
-        "title": "Backpack",
-        "description": "Join us for an exhilarating mountain hiking experience.",
-        "category": "Backpack",
+        "title": "Travel Gear",
+        "description": "Explore our high-quality travel gear for all your adventures.",
+        "category": "travel_gear",
+        "sub_category": "Backpacks | Security Items",
         "image": "https://i.ibb.co/8Yxb1Gd/backpack.jpg"
     },
     {
-        "title": "Electronics",
-        "description": "Help us keep the beaches clean and enjoy a day by the sea.",
-        "category": "Electronics",
+        "title": "Power",
+        "description": "Discover reliable power solutions for your devices.",
+        "category": "power",
+        "sub_category": "Power Banks | Chargers",
+        "image": "https://i.ibb.co/4tjnLdT/power.jpg"
+    },
+    {
+        "title": "Outdoor Clothing",
+        "description": "Stay comfortable with our range of outdoor clothing.",
+        "category": "outdoor_clothing",
+        "sub_category": "Jackets | Raincoats",
         "image": "https://i.ibb.co/Jpc3b47/image.png"
     },
     {
-        "title": "City Marathon",
-        "description": "Participate in our annual city marathon event.",
-        "category": "Tents",
+        "title": "Camping & Hiking Equipment",
+        "description": "Equip yourself with top-quality camping and hiking gear.",
+        "category": "camping_hiking_equipment",
+        "sub_category": "Tents | Sleeping Bags",
         "image": "https://i.ibb.co/Jpc3b47/image.png"
     },
     {
-        "title": "City Marathon",
-        "description": "Participate in our annual city marathon event.",
-        "category": "Climbing Gear",
+        "title": "Travel Gadgets",
+        "description": "Enhance your travel experience with our innovative gadgets.",
+        "category": "travel_gadgets",
+        "sub_category": "Adapters | Travel Organizers",
         "image": "https://i.ibb.co/Jpc3b47/image.png"
     },
     {
-        "title": "City Marathon",
-        "description": "Participate in our annual city marathon event.",
-        "category": "Apparel",
+        "title": "Adventure Sports Gear",
+        "description": "Gear up for adventure sports with our specialized equipment.",
+        "category": "adventure_sports_gear",
+        "sub_category": "Climbing Gear | Water Sports",
         "image": "https://i.ibb.co/Jpc3b47/image.png"
     },
     {
-        "title": "City Marathon",
-        "description": "Participate in our annual city marathon event.",
-        "category": "Tools & Kit",
-        "image": "https://i.ibb.co/Jpc3b47/image.png"
-    },
-    {
-        "title": "City Marathon",
-        "description": "Participate in our annual city marathon event.",
-        "category": "Tools & Kit",
-        "image": "https://i.ibb.co/Jpc3b47/image.png"
-    },
-    {
-        "title": "City Marathon",
-        "description": "Participate in our annual city marathon event.",
-        "category": "Tools & Kit",
+        "title": "Tools & Kits",
+        "description": "Find the right tools and kits for your outdoor activities.",
+        "category": "tools_kits",
+        "sub_category": "Multi-tools | Repair Kits",
         "image": "https://i.ibb.co/Jpc3b47/image.png"
     }
 ]
