@@ -3,7 +3,7 @@ import './globals.css';
 
 
 const inter = Inter({ subsets: ['latin'] });
-export const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] }); // Add weights as needed
+const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] }); // Add weights as needed
 const roboto = Roboto({ subsets: ['latin'], weight: ['400', '700'] }); // Add weights as needed
 
 

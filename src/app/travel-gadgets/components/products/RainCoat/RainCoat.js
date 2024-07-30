@@ -27,9 +27,9 @@ const RainCoat = () => {
         <div className="py-20 container mx-auto px-2">
             <div className="mb-12 lg:px-8">
                 <div className="flex poppins items-center justify-between px-2">
-                    <p className="title">Rain Coat</p>
+                    <p className="title ">Waterproof Jacket (Rain Coat)</p>
                     <Link href="/raincoat">
-                        <p className="font-semibold hover:underline text-sky-950">View All</p>
+                        <p className=" hover:underline text-white bg-sky-900 rounded-md px-2 p-1 ">View All</p>
                     </Link>
                 </div>
                 <p className="border-b-2 border-gray-400 flex-grow"></p>
