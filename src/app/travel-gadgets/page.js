@@ -8,6 +8,7 @@ import GadgetBanner from "./components/Home/GadgetBanner/GadgetBanner";
 import EcommerceNavbar from "./components/EcommerceNavbar/EcommerceNavbar";
 import LatestProducts from "./components/products/LatestProducts/LatestProducts";
 import RainCoat from "./components/products/RainCoat/RainCoat";
+import TopSellingProduct from "./components/products/TopSellingProduct/TopSellingProduct";
 
 
 const TravelGadgets = () => {
@@ -17,11 +18,12 @@ const TravelGadgets = () => {
             <GadgetsNavbar />
             <EcommerceNavbar />
             <BannerEco />
-            <FeatureSection />
             <AllCategories />
+            <TopSellingProduct />
             <GadgetBanner />
             <LatestProducts />
             <RainCoat />
+            <FeatureSection />
 
 
         </div>

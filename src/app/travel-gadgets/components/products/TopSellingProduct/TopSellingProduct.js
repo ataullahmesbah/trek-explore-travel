@@ -1,6 +1,7 @@
 
 
-const Tshirts = () => {
+
+const TopSellingProduct = () => {
     return (
         <div>
             
@@ -8,4 +9,4 @@ const Tshirts = () => {
     );
 };
 
-export default Tshirts;
+export default TopSellingProduct;
