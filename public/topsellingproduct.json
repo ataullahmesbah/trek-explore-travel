@@ -1,0 +1,170 @@
+[
+    {
+        "_id": "542gjygnmd",
+        "title": "Traveler's Backpack",
+        "description": "Durable and spacious backpack for all your travel needs.",
+        "img": "https://i.ibb.co/8Yxb1Gd/backpack.jpg",
+        "category": "travel_gear",
+        "sub_categories": "Backpacks"
+    },
+    {
+        "_id": "1356klmnmn",
+        "title": "T-Shirt Combo Pack",
+        "description": "Combo pack of comfortable t-shirts for versatile use.",
+        "img": "https://i.ibb.co/Jpc3b47/image.png",
+        "category": "outdoor_clothing",
+        "sub_categories": "T-Shirts, Combos"
+    },
+    {
+        "_id": "95647nmjfhfh",
+        "title": "Portable Power Bank",
+        "description": "High-capacity power bank to keep your devices charged.",
+        "img": "https://i.ibb.co/4tjnLdT/power.jpg",
+        "category": "power",
+        "sub_categories": "Power Banks"
+    },
+    {
+        "_id": "6745ghjffg",
+        "title": "Waterproof Rain Jacket",
+        "description": "Stay dry with this waterproof and windproof rain jacket.",
+        "img": "https://i.ibb.co/b17H23P/image.png",
+        "category": "outdoor_clothing",
+        "sub_categories": "Jackets"
+    },
+    {
+        "_id": "hf576ghkkl",
+        "title": "Ultra-Light Camping Tent",
+        "description": "Compact and lightweight tent for easy setup.",
+        "img": "https://i.ibb.co/Jpc3b47/image.png",
+        "category": "camping_hiking_equipment",
+        "sub_categories": "Tents"
+    },
+    {
+        "_id": "3498hfjkjl",
+        "title": "Universal Travel Adapter",
+        "description": "A must-have universal adapter for international travel.",
+        "img": "https://i.ibb.co/Jpc3b47/image.png",
+        "category": "travel_gadgets",
+        "sub_categories": "Adapters"
+    },
+    {
+        "_id": "9087jkhkhj",
+        "title": "Climbing Harness",
+        "description": "Safety first with this high-quality climbing harness.",
+        "img": "https://i.ibb.co/Jpc3b47/image.png",
+        "category": "adventure_sports_gear",
+        "sub_categories": "Climbing Gear"
+    },
+    {
+        "_id": "5432mkjlkj",
+        "title": "Multi-Tool Kit",
+        "description": "Versatile multi-tool kit for any outdoor situation.",
+        "img": "https://i.ibb.co/Jpc3b47/image.png",
+        "category": "tools_kits",
+        "sub_categories": "Multi-tools"
+    },
+    {
+        "_id": "7865yghghk",
+        "title": "Trekking T-Shirt",
+        "description": "Comfortable and moisture-wicking t-shirt for trekking.",
+        "img": "https://i.ibb.co/Jpc3b47/image.png",
+        "category": "outdoor_clothing",
+        "sub_categories": "T-Shirts"
+    },
+    {
+        "_id": "8743jhfghk",
+        "title": "Travel Organizer",
+        "description": "Keep your essentials organized with this travel organizer.",
+        "img": "https://i.ibb.co/Jpc3b47/image.png",
+        "category": "travel_gadgets",
+        "sub_categories": "Travel Organizers"
+    },
+    {
+        "_id": "9901jkhkjk",
+        "title": "Compact Sleeping Bag",
+        "description": "Warm and compact sleeping bag for all seasons.",
+        "img": "https://i.ibb.co/Jpc3b47/image.png",
+        "category": "camping_hiking_equipment",
+        "sub_categories": "Sleeping Bags"
+    },
+    {
+        "_id": "1234kjhkjh",
+        "title": "Waterproof Action Camera",
+        "description": "Capture every adventure with this waterproof action camera.",
+        "img": "https://i.ibb.co/Jpc3b47/image.png",
+        "category": "adventure_sports_gear",
+        "sub_categories": "Water Sports"
+    },
+    {
+        "_id": "2345mnmnmn",
+        "title": "Solar Charger",
+        "description": "Eco-friendly solar charger for your gadgets on the go.",
+        "img": "https://i.ibb.co/Jpc3b47/image.png",
+        "category": "power",
+        "sub_categories": "Chargers"
+    },
+    {
+        "_id": "5467yuyuyu",
+        "title": "Outdoor Trousers",
+        "description": "Comfortable and durable trousers for outdoor activities.",
+        "img": "https://i.ibb.co/Jpc3b47/image.png",
+        "category": "outdoor_clothing",
+        "sub_categories": "Trousers"
+    },
+    {
+        "_id": "6578uyuuyh",
+        "title": "Hiking Boots",
+        "description": "Sturdy and comfortable boots for hiking and trekking.",
+        "img": "https://i.ibb.co/Jpc3b47/image.png",
+        "category": "outdoor_clothing",
+        "sub_categories": "Shoes"
+    },
+    {
+        "_id": "7689jkjkjk",
+        "title": "Travel Shoes",
+        "description": "Lightweight and comfortable shoes perfect for travel.",
+        "img": "https://i.ibb.co/Jpc3b47/image.png",
+        "category": "outdoor_clothing",
+        "sub_categories": "Shoes"
+    },
+    {
+        "_id": "8790mnmnmn",
+        "title": "Travel Shirt",
+        "description": "Breathable and stylish shirt suitable for travel.",
+        "img": "https://i.ibb.co/Jpc3b47/image.png",
+        "category": "outdoor_clothing",
+        "sub_categories": "Shirts"
+    },
+    {
+        "_id": "9801lkjlkj",
+        "title": "Adventure Watch",
+        "description": "Rugged watch designed for adventure and travel.",
+        "img": "https://i.ibb.co/Jpc3b47/image.png",
+        "category": "travel_gadgets",
+        "sub_categories": "Watches"
+    },
+    {
+        "_id": "1023jkljkl",
+        "title": "Emergency Survival Kit",
+        "description": "Comprehensive survival kit for emergency situations.",
+        "img": "https://i.ibb.co/Jpc3b47/image.png",
+        "category": "tools_kits",
+        "sub_categories": "Survival Kits"
+    },
+    {
+        "_id": "1134kjlkjl",
+        "title": "Thermal Travel Mug",
+        "description": "Keep your drinks hot or cold with this thermal travel mug.",
+        "img": "https://i.ibb.co/Jpc3b47/image.png",
+        "category": "travel_gadgets",
+        "sub_categories": "Mugs"
+    },
+    {
+        "_id": "1245lkmklm",
+        "title": "Foldable Travel Duffel Bag",
+        "description": "Convenient and foldable duffel bag for easy packing.",
+        "img": "https://i.ibb.co/Jpc3b47/image.png",
+        "category": "travel_gear",
+        "sub_categories": "Duffel Bags"
+    }
+]

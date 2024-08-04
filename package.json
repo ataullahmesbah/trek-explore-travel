@@ -32,6 +32,7 @@
     "react-slick": "^0.30.2",
     "slick-carousel": "^1.8.1",
     "swiper": "^11.1.8",
+    "tiny-slider-react": "^0.5.7",
     "tsx": "^4.11.2"
   },
   "devDependencies": {

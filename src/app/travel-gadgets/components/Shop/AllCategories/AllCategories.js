@@ -54,13 +54,13 @@ const AllCategories = () => {
                             </Link>
                             <div className="border-b border-sky-900 w-1/2 mb-2"></div>
                             <p className="text-sm text-gray-600 py-5">{category.sub_category}</p>
-                            <div className="relative w-full h-48">
+                            <div className="flex flex-col items-center">
                                 <Image
                                     src={category.image}
                                     alt={category.title}
-                                    width={200} // or appropriate size
-                                    height={400} // or appropriate size
-                                    className="object-cover w-full h-full"
+                                    width={300}
+                                    height={300}
+                                    className="object-contain w-64 h-52"
                                 />
                             </div>
                         </div>
