@@ -6,7 +6,7 @@ const YouTubeEmbed = ({ videoIds, facebookVideoUrls }) => {
     const [selectedVideo, setSelectedVideo] = useState(null);
 
     return (
-        <div className="container mx-auto px-4 lg:px-16 py-8 mt-10">
+        <div className="container mx-auto px-4 lg:px-16 py-9">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
                 {/* Render YouTube videos */}
                 {videoIds.map((id) => (

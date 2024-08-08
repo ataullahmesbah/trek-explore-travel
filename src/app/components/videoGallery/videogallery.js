@@ -11,7 +11,7 @@ const VideoGallery = () => {
     const facebookVideoUrls = [
         'https://www.facebook.com/100023260389958/videos/1378739092700870/',
         'https://www.facebook.com/reel/6987489514710138',
-        'https://fb.watch/sjojtwPPzL/',
+        'https://www.facebook.com/reel/494426556580965',
         // Add more Facebook video URLs as needed
     ];
 

@@ -30,7 +30,7 @@ const TopSellingProduct = () => {
         slidesToShow: 5,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 1500,
         responsive: [
             {
                 breakpoint: 1024,
@@ -58,8 +58,8 @@ const TopSellingProduct = () => {
             <h1 className="text-xl md:text-2xl lg:text-2xl font-semibold mb-4 poppins">Top Selling Products</h1>
             <Slider {...settings} className="bg-gray-50 rounded-sm">
                 {topSelling.map((topSell, index) => (
-                    <div key={index} className="flex flex-col items-center p-4 ">
-                        <Link href={`/topSell/${topSell._id}`} legacyBehavior>
+                    <div key={index} className="flex flex-col items-center p-4">
+                       
                             <div className="flex flex-col items-center">
                                 <Image
                                     src={topSell.img}
@@ -81,7 +81,7 @@ const TopSellingProduct = () => {
                                     </Link>
                                     </div>
                             </div>
-                        </Link>
+                        
                     </div>
                 ))}
             </Slider>

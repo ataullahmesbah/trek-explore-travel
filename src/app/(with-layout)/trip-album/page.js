@@ -15,20 +15,20 @@ const TripAlbum = () => {
         <div className="bg-gray-50 p-10">
            <ContainerPage>
                 <div className="mt-10">
-                    <h1 className="text-black font-semibold text-xl text-center">Video Album</h1>
+                    <h1 className="title poppins text-center">Video Album</h1>
                     {/* underline */}
                     <div className="flex justify-center mt-7">
-                        <div className="border-b-2 w-3/4"></div>
+                        <div className="border-b-2 w-2/5"></div>
                     </div>
                     <VideoGallery />
                 </div>
 
                 {/* Images Album */}
-                <div className="mt-10">
-                    <h1 className="text-black font-semibold text-xl text-center">All Images From Trip Album</h1>
+                <div className="py-10">
+                    <h1 className="title poppins text-center">All Images From Trip Album</h1>
                     {/* underline */}
-                    <div className="flex justify-center mt-7">
-                        <div className="border-b-2 w-3/4"></div>
+                    <div className="flex justify-center py-5">
+                        <div className="border-b-2 border-gray-300 w-3/4"></div>
                     </div>
                     <TripAlbums />
                 </div>
