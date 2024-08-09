@@ -28,6 +28,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { FaUser, FaUserAltSlash, FaUserEdit } from 'react-icons/fa';
+import Image from 'next/image';
 
 
 const GadgetsNavbar = () => {
@@ -46,9 +47,19 @@ const GadgetsNavbar = () => {
             {/* First AppBar  Start */}
             <AppBar position="static" sx={{ backgroundColor: 'rgb(8 47 73)', justifyContent: 'space-between' }} className=' shadow-md border shadow-slate-50 '>
                 <Toolbar sx={{ justifyContent: 'space-between', flexWrap: 'wrap' }} >
-                    <Typography variant="h6" component="div" sx={{ display: { xs: 'block' } }}>
-                        Trek Explore Travel
-                    </Typography>
+                    <Link href="/travel-gadgets">
+                        <div className="flex items-center gap-2">
+                            <Image
+                                src="/images/logo.webp"
+                                alt="Trek Explore Travel Logo"
+                                width={100}
+                                height={30}
+                                style={{ maxWidth: '100px', maxHeight: '40px' }} // Debugging: Ensure sizes are applied
+                                className="logo"
+                            />
+                            <h1 className="text-xl lg:text-2xl font-bold poppins">Trek Explore Travel</h1>
+                        </div>
+                    </Link>
 
                     {/* Search Bar */}
                     <Box sx={{ maxWidth: '50%', flexGrow: 1, display: { xs: 'none', md: 'flex' }, mx: 2 }}>
@@ -90,7 +101,7 @@ const GadgetsNavbar = () => {
                         <Link href='/login'>
                             <Box sx={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
 
-                                <FaUserEdit className='w-6 h-6 text-gray-300'/>
+                                <FaUserEdit className='w-6 h-6 text-gray-300' />
                                 <Typography variant="body1" component="div">
                                     Account Sign In
                                 </Typography>

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import Image from 'next/image';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -44,8 +45,19 @@ const Navbar = () => {
     <nav className="bg-sky-950 text-white p-2 fixed w-full top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/">
-          <div className="text-2xl font-bold cursor-pointer">Trek Explore Travel</div>
+          <div className="flex items-center gap-2">
+            <Image
+              src="/images/logo.webp"
+              alt="Trek Explore Travel Logo"
+              width={100}
+              height={30}
+              style={{ maxWidth: '100px', maxHeight: '40px' }} // Debugging: Ensure sizes are applied
+              className="logo"
+            />
+            <h1 className="text-xl lg:text-2xl font-bold poppins">Trek Explore Travel</h1>
+          </div>
         </Link>
+
         <div className="hidden md:flex space-x-6 items-center">
           <Link href="/" legacyBehavior><a>Home</a></Link>
 
@@ -87,7 +99,6 @@ const Navbar = () => {
             )}
           </div>
 
-
           <Link href="/travel-gadgets" legacyBehavior><a className="block px-4 py-2">Travel Gadgets</a></Link>
           <Link href="/trip-album" legacyBehavior><a>Trip Album</a></Link>
           <Link href="/travelstories" legacyBehavior><a>Travel Stories</a></Link>
@@ -128,23 +139,6 @@ const Navbar = () => {
               </div>
             )}
           </div>
-          {/* <div className="relative">
-            <button
-              onClick={() => handleSubMenuToggle('gadgets')}
-              className="flex items-center px-4 py-2 focus:outline-none"
-            >
-              Tour Gadgets
-              {subMenuOpen.gadgets ? <FaChevronUp className="ml-1" /> : <FaChevronDown className="ml-1" />}
-            </button>
-            {subMenuOpen.gadgets && (
-              <div className="bg-sky-800 text-white p-2 rounded shadow-lg">
-                <Link href="/gadgets/accessories" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">Travel Accessories</a></Link>
-                <Link href="/gadgets/travel-gadget" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">Travel Gadget</a></Link>
-                <Link href="/gadgets/bags" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">Sleeping Bag</a></Link>
-                <Link href="/gadgets/mat" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">Mat</a></Link>
-              </div>
-            )}
-          </div> */}
           <Link href="/travel-gadgets" legacyBehavior><a className="block px-4 py-2">Travel Gadgets</a></Link>
           <Link href="/trip-album" legacyBehavior><a className="block px-4 py-2">Trip Album</a></Link>
           <Link href="/travelstories" legacyBehavior><a className="block px-4 py-2">Travel Stories</a></Link>

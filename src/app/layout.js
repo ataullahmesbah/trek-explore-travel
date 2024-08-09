@@ -1,21 +1,19 @@
 import { Inter, Poppins, Roboto } from 'next/font/google';
+import Head from 'next/head';
 import './globals.css';
 
-
 const inter = Inter({ subsets: ['latin'] });
-const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] }); // Add weights as needed
-const roboto = Roboto({ subsets: ['latin'], weight: ['400', '700'] }); // Add weights as needed
-
-
+const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
+const roboto = Roboto({ subsets: ['latin'], weight: ['400', '700'] });
 
 export const metadata = {
   title: 'Trek Explore Travel - Plan Your Adventure Tour Now',
-  description: 'Welcome to Trek Explore Travel! Discover and plan your next adventure with us. We offer personalized travel packages, expert guides, and unforgettable experiences to the most exciting destinations around the world. Explore, dream, and discover with Trek Explore Travel.',
+  description: 'Welcome to Trek Explore Travel! Discover and plan your next adventure with us. We offer personalized travel packages, expert guides, and unforgettable experiences to the most exciting destinations around the world.',
   keywords: 'Trek Explore Travel, adventure tours, travel packages, personalized travel, expert guides, travel experiences, trekking, travel destinations',
   author: 'Trek Explore Travel',
   openGraph: {
     title: 'Trek Explore Travel - Plan Your Adventure Tour Now',
-    description: 'Welcome to Trek Explore Travel! Discover and plan your next adventure with us. We offer personalized travel packages, expert guides, and unforgettable experiences to the most exciting destinations around the world. Explore, dream, and discover with Trek Explore Travel.',
+    description: 'Welcome to Trek Explore Travel! Discover and plan your next adventure with us. We offer personalized travel packages, expert guides, and unforgettable experiences to the most exciting destinations around the world.',
     type: 'website',
     url: 'https://www.trekexploretravel.com/',
     images: [
@@ -30,7 +28,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Trek Explore Travel - Plan Your Adventure Tour Now',
-    description: 'Welcome to Trek Explore Travel! Discover and plan your next adventure with us. We offer personalized travel packages, expert guides, and unforgettable experiences to the most exciting destinations around the world. Explore, dream, and discover with Trek Explore Travel.',
+    description: 'Welcome to Trek Explore Travel! Discover and plan your next adventure with us. We offer personalized travel packages, expert guides, and unforgettable experiences to the most exciting destinations around the world.',
     image: 'https://www.trekexploretravel.com/twitter-image.jpg',
   },
 };
@@ -38,6 +36,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        {/* Link to favicon.ico */}
+        <link rel="icon" href="/favicons/favicon.ico" />
+      </head>
       <body className={inter.className}>
         {children}
       </body>
