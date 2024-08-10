@@ -4,9 +4,13 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import Image from 'next/image';
+import { useThemeSwitch } from '../../hooks/useThemeSwitch'; // 
+
+import { MdOutlineWbSunny } from "react-icons/md";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mode, setMode] = useThemeSwitch();
   const [subMenuOpen, setSubMenuOpen] = useState({
     destination: false,
     customer: false,
@@ -51,7 +55,7 @@ const Navbar = () => {
               alt="Trek Explore Travel Logo"
               width={100}
               height={30}
-              style={{ maxWidth: '130px', maxHeight: '45px' }} // Debugging: Ensure sizes are applied
+              style={{ maxWidth: '130px', maxHeight: '45px' }}
               className="logo"
             />
             <h1 className="text-xl lg:text-2xl font-bold poppins">Trek Explore Travel</h1>
@@ -60,42 +64,38 @@ const Navbar = () => {
 
         <div className="hidden md:flex space-x-6 items-center">
           <Link href="/" legacyBehavior><a>Home</a></Link>
-
           <div
             className="relative"
             onMouseEnter={() => handleMouseEnter('destination')}
             onMouseLeave={() => handleMouseLeave('destination')}
           >
             <button
-              className="flex items-center text-white py-2 px-4  focus:outline-none"
+              className="flex items-center text-white py-2 px-4 focus:outline-none"
               onClick={() => handleSubMenuToggle('destination')}
             >
               Destination
               {subMenuOpen.destination ? <FaChevronUp className="ml-1" /> : <FaChevronDown className="ml-1" />}
             </button>
             {subMenuOpen.destination && (
-              <div className="absolute left-0 top-full  bg-black opacity-35 shadow-lg rounded-lg text-white w-56 z-40">
-                <div className="px-4 py-2 border-b">
-                  <h4 className="text-lg font-semibold">Destinations</h4>
-                </div>
+              <div className="absolute left-0 top-full bg-sky-900 opacity-85 shadow-lg rounded-lg text-white w-56 z-50 poppins">
+               
                 <div className="py-2">
                   <Link href="/destination/bangladesh" legacyBehavior>
-                    <a className="block px-4 py-2 hover:bg-gray-100 rounded-md">Odekha Banlar Khoje</a>
+                    <a className="block px-4 py-2 hover:bg-sky-950 text-white rounded-md">Odekha Banglar Khoje</a>
                   </Link>
                   <Link href="/destination/nepal" legacyBehavior>
-                    <a className="block px-4 py-2 hover:bg-gray-100 rounded-md">Nepal</a>
+                    <a className="block px-4 py-2 hover:bg-sky-950 text-white rounded-md">Nepal</a>
                   </Link>
                   <Link href="/destination/india" legacyBehavior>
-                    <a className="block px-4 py-2 hover:bg-gray-100 rounded-md">India</a>
+                    <a className="block px-4 py-2 hover:bg-sky-950 text-white rounded-md">India</a>
                   </Link>
                   <Link href="/destination/maldives" legacyBehavior>
-                    <a className="block px-4 py-2 hover:bg-gray-100 rounded-md">Maldives</a>
+                    <a className="block px-4 py-2 hover:bg-sky-950 text-white rounded-md">Maldives</a>
                   </Link>
                 </div>
               </div>
             )}
           </div>
-
           <Link href="/travel-gadgets" legacyBehavior><a className="block px-4 py-2">Travel Gadgets</a></Link>
           <Link href="/trip-album" legacyBehavior><a>Trip Album</a></Link>
           <Link href="/travelstories" legacyBehavior><a>Travel Stories</a></Link>
@@ -107,6 +107,13 @@ const Navbar = () => {
               Log In
             </button>
           </Link>
+
+
+          <button onClick={() => setMode(mode === 'light' ? 'dark' : 'light')} className="text-white">
+            <MdOutlineWbSunny />
+          </button>
+
+
         </div>
         <div className="md:hidden">
           <button onClick={handleMenuToggle}>

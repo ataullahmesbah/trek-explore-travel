@@ -2,27 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-
+/* Basic resets */
 html,
-body,
-:root {
+body {
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-/* google fonts */
-
+/* Google fonts */
 :root {
   --font-inter: 'Inter', sans-serif;
   --font-poppins: 'Poppins', sans-serif;
   --font-roboto: 'Roboto', sans-serif;
+  --background-color: #ffffff;
+  --text-color: #000000;
 }
 
-/* Set a default font for the body */
 body {
   font-family: var(--font-inter);
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
-/* Define utility classes for specific fonts */
+/* Dark theme styles */
+.dark {
+  --background-color: #000000;
+  --text-color: #ffffff;
+}
+
+/* Utility classes for fonts */
 .inter {
   font-family: var(--font-inter);
 }
@@ -35,69 +44,45 @@ body {
   font-family: var(--font-roboto);
 }
 
-/* Specific class to use Poppins 400 */
-.poppins-400 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
+/* Logo */
+.logo {
+  max-width: 130px;
+  max-height: 45px;
+  width: auto;
+  height: auto;
 }
 
-
-
-
-
-/* Define the base title styles */
+/* Title and Subtitle styles */
 .title {
   font-size: 1.25rem;
-  /* text-xl */
   font-weight: 600;
-  /* font-semibold */
 }
 
-/* Medium screens (min-width: 768px) */
 @media (min-width: 768px) {
   .title {
     font-size: 1.5rem;
-    /* text-2xl */
   }
 }
 
-/* Large screens (min-width: 1024px) */
 @media (min-width: 1024px) {
   .title {
     font-size: 1.875rem;
-    /* text-3xl */
   }
 }
 
-/* Define the base subtitle styles */
 .subtitle {
   font-size: 1rem;
-  /* text-base */
   color: #4a5568;
-  /* text-gray-700 */
 }
 
-/* Small screens (min-width: 640px) */
 @media (min-width: 640px) {
   .subtitle {
     font-size: 1.125rem;
-    /* text-lg */
   }
 }
 
-/* Medium screens (min-width: 768px) */
 @media (min-width: 768px) {
   .subtitle {
     font-size: 1.25rem;
-    /* text-xl */
   }
-}
-
-
-/* globals.css */
-.logo {
-  max-width: 130px; /* Ensure the logo does not exceed this width */
-  max-height: 45px; /* Ensure the logo does not exceed this height */
-  width: auto; /* Maintain aspect ratio */
-  height: auto; /* Maintain aspect ratio */
 }
