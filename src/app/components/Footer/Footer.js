@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { FaFacebook, FaYoutube, FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa';
@@ -11,8 +12,20 @@ const Footer = () => {
                 <div className="flex flex-wrap justify-between">
                     {/* Company Info */}
                     <div className="w-full sm:w-1/2 lg:w-1/4 mb-6 lg:mb-0">
-                        <h2 className="text-xl font-semibold mb-4">Trek Explore Travel</h2>
-                        <p className="text-gray-200">
+                        <Link href="/">
+                            <div className="flex items-center gap-2 mb-3">
+                                <Image
+                                    src="/images/logo.webp"
+                                    alt="Trek Explore Travel Logo"
+                                    width={100}
+                                    height={30}
+                                    style={{ maxWidth: '130px', maxHeight: '45px' }} // Debugging: Ensure sizes are applied
+                                    className="logo"
+                                />
+                                <h1 className="text-xl lg:text-2xl font-bold poppins">Trek Explore Travel</h1>
+                            </div>
+                        </Link>
+                        <p className="text-gray-200 px-3">
                             Explore the world with us. Join our adventures and create unforgettable memories.
                         </p>
                     </div>
@@ -20,11 +33,11 @@ const Footer = () => {
                     <div className="w-full sm:w-1/2 lg:w-1/4 mb-6 lg:mb-0">
                         <h3 className="text-lg font-semibold mb-4">Privacy</h3>
                         <ul>
-                            
-                            
+
+
                             <li className="mb-2"><a href="/aboutus" className="text-gray-200 hover:text-gray-400">About Us</a></li>
                             <li className="mb-2"><a href="/privacypolicy" className="text-gray-200 hover:text-gray-400">Privacy Policy</a></li>
-                            
+
                             <li className="mb-2"><a href="/terms-conditions" className="text-gray-200 hover:text-gray-400">Terms & Conditions</a></li>
                             <li className="mb-2"><a href="/contactus" className="text-gray-200 hover:text-gray-400">Contact Us</a></li>
                         </ul>

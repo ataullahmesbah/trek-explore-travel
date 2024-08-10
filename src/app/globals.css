@@ -96,8 +96,8 @@ body {
 
 /* globals.css */
 .logo {
-  max-width: 100px; /* Ensure the logo does not exceed this width */
-  max-height: 40px; /* Ensure the logo does not exceed this height */
+  max-width: 130px; /* Ensure the logo does not exceed this width */
+  max-height: 45px; /* Ensure the logo does not exceed this height */
   width: auto; /* Maintain aspect ratio */
   height: auto; /* Maintain aspect ratio */
 }

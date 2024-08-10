@@ -51,7 +51,7 @@ const Navbar = () => {
               alt="Trek Explore Travel Logo"
               width={100}
               height={30}
-              style={{ maxWidth: '100px', maxHeight: '40px' }} // Debugging: Ensure sizes are applied
+              style={{ maxWidth: '130px', maxHeight: '45px' }} // Debugging: Ensure sizes are applied
               className="logo"
             />
             <h1 className="text-xl lg:text-2xl font-bold poppins">Trek Explore Travel</h1>
