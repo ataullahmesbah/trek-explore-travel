@@ -48,7 +48,7 @@ const BlogallInfo = () => {
                                 className="w-full h-48 object-cover transform transition-transform duration-300 hover:scale-105"
                             />
                             <div className="p-6">
-                                <h2 className="text-2xl font-bold mb-2">{blog.title}</h2>
+                                <h2 className="poppins font-semibold text-xl mb-2">{blog.title}</h2>
                                 <p className="text-gray-600 mb-4">{new Date(blog.date).toLocaleDateString()}</p>
                                 <p className="text-gray-700 mb-4">
                                     {blog.description.slice(0, 60)}...
@@ -94,7 +94,7 @@ const BlogallInfo = () => {
                                 className="w-full h-48 object-cover transform transition-transform duration-300 hover:scale-105"
                             />
                             <div className="p-6">
-                                <h2 className="text-2xl font-bold mb-2">{blog.title}</h2>
+                                <h2 className="poppins font-semibold text-xl mb-2">{blog.title}</h2>
                                 <p className="text-gray-600 mb-4">{new Date(blog.date).toLocaleDateString()}</p>
                                 <p className="text-gray-700 mb-4">
                                     {blog.description.slice(0, 60)}...

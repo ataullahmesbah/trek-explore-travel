@@ -62,37 +62,34 @@ const Navbar = () => {
           <Link href="/" legacyBehavior><a>Home</a></Link>
 
           <div
-            className="relative bg-fixed"
+            className="relative"
             onMouseEnter={() => handleMouseEnter('destination')}
             onMouseLeave={() => handleMouseLeave('destination')}
           >
             <button
-              className="flex items-center focus:outline-none text-white"
+              className="flex items-center text-white py-2 px-4  focus:outline-none"
               onClick={() => handleSubMenuToggle('destination')}
             >
               Destination
               {subMenuOpen.destination ? <FaChevronUp className="ml-1" /> : <FaChevronDown className="ml-1" />}
             </button>
             {subMenuOpen.destination && (
-              <div className="absolute left-0 bg-white shadow-xl w-48 text-black p-4 rounded mt-1 z-40">
-                <div className="relative">
+              <div className="absolute left-0 top-full  bg-black opacity-35 shadow-lg rounded-lg text-white w-56 z-40">
+                <div className="px-4 py-2 border-b">
+                  <h4 className="text-lg font-semibold">Destinations</h4>
+                </div>
+                <div className="py-2">
                   <Link href="/destination/bangladesh" legacyBehavior>
-                    <a className="block py-1 hover:bg-gray-300 rounded-md">Odekha Banlar Khoje</a>
+                    <a className="block px-4 py-2 hover:bg-gray-100 rounded-md">Odekha Banlar Khoje</a>
                   </Link>
-                </div>
-                <div className="relative">
                   <Link href="/destination/nepal" legacyBehavior>
-                    <a className="block py-1 hover:bg-gray-300 rounded-md">Nepal</a>
+                    <a className="block px-4 py-2 hover:bg-gray-100 rounded-md">Nepal</a>
                   </Link>
-                </div>
-                <div className="relative">
                   <Link href="/destination/india" legacyBehavior>
-                    <a className="block py-1 hover:bg-gray-300 rounded-md">India</a>
+                    <a className="block px-4 py-2 hover:bg-gray-100 rounded-md">India</a>
                   </Link>
-                </div>
-                <div className="relative">
                   <Link href="/destination/maldives" legacyBehavior>
-                    <a className="block py-1 hover:bg-gray-300 rounded-md">Maldives</a>
+                    <a className="block px-4 py-2 hover:bg-gray-100 rounded-md">Maldives</a>
                   </Link>
                 </div>
               </div>
