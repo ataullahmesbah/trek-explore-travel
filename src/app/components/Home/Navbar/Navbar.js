@@ -80,7 +80,7 @@ const Navbar = () => {
               <div className="absolute left-0 top-full bg-sky-900 opacity-85 shadow-lg rounded-lg text-white w-56 z-50 poppins">
                
                 <div className="py-2">
-                  <Link href="/destination/bangladesh" legacyBehavior>
+                  <Link href="/obk" legacyBehavior>
                     <a className="block px-4 py-2 hover:bg-sky-950 text-white rounded-md">Odekha Banglar Khoje</a>
                   </Link>
                   <Link href="/destination/nepal" legacyBehavior>
@@ -136,7 +136,7 @@ const Navbar = () => {
             </button>
             {subMenuOpen.destination && (
               <div className="bg-sky-800 text-white p-2 rounded shadow-lg">
-                <Link href="/destination/bangladesh" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">Odekha Banlar Khoje</a></Link>
+                <Link href="/obk" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">Odekha Banglar Khoje</a></Link>
                 <Link href="/destination/nepal" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">Nepal</a></Link>
                 <Link href="/destination/india" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">India</a></Link>
                 <Link href="/destination/maldives" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">Maldives</a></Link>
