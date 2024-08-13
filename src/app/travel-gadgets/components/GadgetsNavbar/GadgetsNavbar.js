@@ -78,30 +78,30 @@ const GadgetsNavbar = () => {
                     </Box>
 
                     {/* Desktop Navbar Items */}
-                    <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', gap: 2 }}>
+                    <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', }}>
                         <Link href='/' className='text-sm text-white hover:underline'>
                             Home
                         </Link>
-                        <span className="text-sm text-white mx-2">|</span>
+                        <span className="text-xs text-white mx-2">|</span>
                         <Link href='/contactus' className='text-sm text-white hover:underline'>
                             Support
                         </Link>
-                        <span className="text-sm text-white mx-2">|</span>
+                        <span className="text-xs text-white mx-2">|</span>
                         <Typography variant="body1" className='text-sm text-white'>
                             About Us
                         </Typography>
-                        <span className="text-sm text-white mx-2">|</span>
-                        <Typography variant="body1" className='text-xs text-white'>
+                        <span className="text-xs text-white mx-2">|</span>
+                        <Link href='/' className='text-sm text-white hover:underline'>
                             Tracking Order
-                        </Typography>
-                        <span className="text-sm text-white mx-2">|</span>
+                        </Link>
+                        <span className="text-xs text-white mx-2">|</span>
                         <Link href='/login' className='text-sm text-white flex items-center gap-1 hover:underline'>
                             
                             <Typography variant="body1">
                                 Sign In
                             </Typography>
                         </Link>
-                        <span className="text-sm text-white mx-2">|</span>
+                        <span className="text-xs text-white mx-2">|</span>
                         <IconButton aria-label="cart" sx={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                             <Badge badgeContent={4} color="secondary">
                                 <ShoppingCartIcon />

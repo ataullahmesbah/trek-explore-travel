@@ -1,47 +1,50 @@
 [
     {
-        "title": "Exploring the Alps",
-        "description": "Join us on an incredible journey through the Swiss Alps...",
+        "_id": "54nbazfg798023uxt1",
+        "title": "Alpine Wonders",
+        "shortDescription": "Experience the stunning beauty of the Swiss Alps.",
+        "detailedDescription": "Join us on an incredible journey through the Swiss Alps, where majestic snow-capped peaks and serene alpine lakes offer breathtaking views and unforgettable adventures. Ideal for outdoor enthusiasts and nature lovers.",
+        "description": "Discover the awe-inspiring landscapes of the Swiss Alps. From challenging hikes to relaxing lake views, this adventure promises an extraordinary experience amidst towering peaks and charming villages.",
         "imageUrl": "https://i.ibb.co/bPXD05m/image.png"
     },
     {
-        "title": "Safari Adventure",
-        "description": "Experience the thrill of a lifetime on an African safari...",
+        "_id": "54nbazfg798023uxt2",
+        "title": "African Safari Quest",
+        "shortDescription": "Embark on a thrilling safari adventure in Africa.",
+        "detailedDescription": "Experience the thrill of a lifetime on an African safari, where you'll encounter majestic wildlife in their natural habitats. From the Big Five to spectacular sunsets, this adventure offers an authentic taste of the wild.",
+        "description": "Immerse yourself in the vibrant landscapes of Africa on a safari adventure. Witness the incredible wildlife, including lions, elephants, and giraffes, while exploring diverse ecosystems and enjoying breathtaking sunsets.",
         "imageUrl": "https://i.ibb.co/ynKrNnL/IMG20220714094755-00.jpg"
     },
     {
-        "title": "Tropical Paradise",
-        "description": "Discover the beauty of the Caribbean islands...",
+        "_id": "54nbazfg798023uxt3",
+        "title": "Caribbean Getaway",
+        "shortDescription": "Relax in the tropical paradise of the Caribbean islands.",
+        "detailedDescription": "Discover the beauty of the Caribbean islands, where crystal-clear waters and white sandy beaches create the perfect escape from the everyday hustle. Enjoy tranquil moments and vibrant island life in a true paradise setting.",
+        "description": "Experience the ultimate tropical retreat in the Caribbean. With its stunning beaches, warm waters, and lively local culture, this getaway is perfect for relaxation and adventure in one of the most beautiful regions of the world.",
         "imageUrl": "https://i.ibb.co/C6dKgkv/image.jpg"
     },
     {
-        "title": "Majestic Mountains",
-        "description": "Exploring the majestic mountains of Patagonia...",
+        "_id": "54nbazfg798023uxt4",
+        "title": "Patagonian Peaks",
+        "shortDescription": "Explore the rugged beauty of Patagonia's mountains.",
+        "detailedDescription": "Exploring the majestic mountains of Patagonia offers a journey through some of the world's most rugged and breathtaking landscapes. Enjoy hiking, climbing, and immersing yourself in the raw beauty of this remote region.",
+        "description": "Traverse the stunning Patagonian peaks where dramatic landscapes and rugged terrain provide a challenging and rewarding adventure. From glacier trekking to mountain vistas, this trip is a dream for avid hikers and explorers.",
         "imageUrl": "https://i.ibb.co/Jpc3b47/image.png"
     },
     {
-        "title": "City Lights",
-        "description": "The vibrant life of New York City...",
+        "_id": "54nbazfg798023uxt5",
+        "title": "New York Lights",
+        "shortDescription": "Experience the vibrant energy of New York City.",
+        "detailedDescription": "The vibrant life of New York City awaits you with its iconic landmarks, bustling streets, and endless entertainment options. Dive into the city that never sleeps and experience its rich cultural tapestry and dynamic atmosphere.",
+        "description": "Discover the excitement and energy of New York City. From Broadway shows to world-class dining, this urban adventure provides a comprehensive look at one of the most iconic cities in the world, full of diverse experiences and opportunities.",
         "imageUrl": "https://i.ibb.co/Jpc3b47/image.png"
     },
     {
-        "title": "Desert Safari",
-        "description": "An unforgettable adventure in the Sahara Desert...",
-        "imageUrl": "https://i.ibb.co/Jpc3b47/image.png"
-    },
-    {
-        "title": "Majestic Mountains",
-        "description": "Exploring the majestic mountains of Patagonia...",
-        "imageUrl": "https://i.ibb.co/Jpc3b47/image.png"
-    },
-    {
-        "title": "City Lights",
-        "description": "The vibrant life of New York City...",
-        "imageUrl": "https://i.ibb.co/Jpc3b47/image.png"
-    },
-    {
-        "title": "Desert Safari",
-        "description": "An unforgettable adventure in the Sahara Desert...",
+        "_id": "54nbazfg798023uxt6",
+        "title": "Sahara Desert Expedition",
+        "shortDescription": "Venture into the heart of the Sahara Desert.",
+        "detailedDescription": "An unforgettable adventure in the Sahara Desert awaits. Experience the vast dunes, stunning sunsets, and traditional desert culture. This expedition offers a unique glimpse into one of the world's most expansive and mysterious landscapes.",
+        "description": "Embark on a desert adventure like no other. Traverse the sweeping sands of the Sahara, witness mesmerizing sunsets, and engage with local traditions. This journey promises an immersive and awe-inspiring experience in one of Earth's most iconic deserts.",
         "imageUrl": "https://i.ibb.co/Jpc3b47/image.png"
     }
 ]
