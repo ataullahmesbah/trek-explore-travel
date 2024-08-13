@@ -15,6 +15,7 @@ body {
   --font-inter: 'Inter', sans-serif;
   --font-poppins: 'Poppins', sans-serif;
   --font-roboto: 'Roboto', sans-serif;
+  --font-hind-siliguri: 'Hind Siliguri', sans-serif;
   --background-color: #ffffff;
   --text-color: #000000;
 }
@@ -42,6 +43,10 @@ body {
 
 .roboto {
   font-family: var(--font-roboto);
+}
+
+.hind-siliguri {
+  font-family: var(--font-hind-siliguri);
 }
 
 /* Logo */
@@ -86,3 +91,15 @@ body {
     font-size: 1.25rem;
   }
 }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@400;700&display=swap');
+
+body {
+    font-family: 'Anek Bangla', sans-serif;
+}
+
+.bd-text {
+    font-family: 'Anek Bangla', sans-serif;
+}
+

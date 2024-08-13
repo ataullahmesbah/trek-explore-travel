@@ -1,10 +1,11 @@
-import { Inter, Poppins, Roboto } from 'next/font/google';
+import { Inter, Poppins, Roboto, Hind_Siliguri } from 'next/font/google';
 import Head from 'next/head';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
 const roboto = Roboto({ subsets: ['latin'], weight: ['400', '700'] });
+const hindSiliguri = Hind_Siliguri({ subsets: ['bengali'], weight: ['400', '700'] });
 
 export const metadata = {
   title: 'Trek Explore Travel - Plan Your Adventure Tour Now',

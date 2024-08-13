@@ -1,13 +1,12 @@
 'use client';
 
-import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import ContainerPage from '../../container/page';
+import { useParams } from 'next/navigation';
 
 const LatestStoriesDynamic = () => {
-    const router = useRouter();
-    const { id } = router.query;
+    const { id } = useParams();
     const [story, setStory] = useState(null);
 
     useEffect(() => {

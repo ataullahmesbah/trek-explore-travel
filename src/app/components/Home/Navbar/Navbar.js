@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-// import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
+
 import { FaCaretDown, FaCaretUp } from "react-icons/fa";
 import Image from 'next/image';
 import { useThemeSwitch } from '../../hooks/useThemeSwitch'; // 
@@ -71,7 +71,7 @@ const Navbar = () => {
             onMouseLeave={() => handleMouseLeave('destination')}
           >
             <button
-              className="flex items-center text-white py-2  focus:outline-none"
+              className="flex items-center text-white py-2 focus:outline-none"
               onClick={() => handleSubMenuToggle('destination')}
             >
               Destination
@@ -133,7 +133,7 @@ const Navbar = () => {
               className="flex items-center px-4 py-2 focus:outline-none"
             >
               Destination
-              {subMenuOpen.destination ? <FaChevronUp className="ml-1" /> : <FaChevronDown className="ml-1" />}
+              {subMenuOpen.destination ? <FaCaretUp className="ml-1" /> : <FaCaretDown className="ml-1" />}
             </button>
             {subMenuOpen.destination && (
               <div className="bg-sky-800 text-white p-2 rounded shadow-lg">
