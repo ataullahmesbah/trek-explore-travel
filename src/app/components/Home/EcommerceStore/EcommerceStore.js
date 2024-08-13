@@ -51,7 +51,7 @@ const EcommerceStore = () => {
                     {/* First Circle: Top-right */}
                     <div className="absolute top-0 right-0 w-48 h-48 bg-blue-50 rounded-full -translate-x-1/3 -translate-y-1/3"></div>
                     {/* Second Circle: Bottom-left */}
-                    <div className="absolute bottom-0 shadow-xl shadow-sky-400 left-0 w-16 h-16 bg-sky-100 rounded-full translate-x-1/3 translate-y-1/3"></div>
+                    {/* <div className="absolute bottom-0 shadow-xl shadow-sky-400 left-0 w-16 h-16 bg-sky-100 rounded-full translate-x-1/3 translate-y-1/3"></div> */}
                 </div>
                 {/* Image Containers */}
                 <div className="relative w-full h-full z-10">

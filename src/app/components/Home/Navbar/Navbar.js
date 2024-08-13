@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
+// import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import { FaCaretDown, FaCaretUp } from "react-icons/fa";
 import Image from 'next/image';
 import { useThemeSwitch } from '../../hooks/useThemeSwitch'; // 
 
@@ -70,15 +71,15 @@ const Navbar = () => {
             onMouseLeave={() => handleMouseLeave('destination')}
           >
             <button
-              className="flex items-center text-white py-2 px-4 focus:outline-none"
+              className="flex items-center text-white py-2  focus:outline-none"
               onClick={() => handleSubMenuToggle('destination')}
             >
               Destination
-              {subMenuOpen.destination ? <FaChevronUp className="ml-1" /> : <FaChevronDown className="ml-1" />}
+              {subMenuOpen.destination ? <FaCaretUp className="ml-1" /> : <FaCaretDown className="ml-1" />}
             </button>
             {subMenuOpen.destination && (
               <div className="absolute left-0 top-full bg-sky-900 opacity-85 shadow-lg rounded-lg text-white w-56 z-50 poppins">
-               
+
                 <div className="py-2">
                   <Link href="/obk" legacyBehavior>
                     <a className="block px-4 py-2 hover:bg-sky-950 text-white rounded-md">Odekha Banglar Khoje</a>

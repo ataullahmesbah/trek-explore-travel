@@ -1,10 +1,7 @@
 'use client';
 
-
-
 import React, { useState } from 'react';
-import Link from 'next/link'
-
+import Link from 'next/link';
 import {
     AppBar,
     Toolbar,
@@ -16,37 +13,27 @@ import {
     Drawer,
     List,
     ListItem,
-    ListItemText,
-    Container,
-    Grid,
-
-
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import { FaUser, FaUserAltSlash, FaUserEdit } from 'react-icons/fa';
+import { FaUserEdit } from 'react-icons/fa';
 import Image from 'next/image';
 
-
 const GadgetsNavbar = () => {
-
-
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
 
-
     return (
         <div>
-
-            {/* First AppBar  Start */}
-            <AppBar position="static" sx={{ backgroundColor: 'rgb(8 47 73)', justifyContent: 'space-between' }} className=' shadow-md border shadow-slate-50 '>
-                <Toolbar sx={{ justifyContent: 'space-between', flexWrap: 'wrap' }} >
+            {/* AppBar Start */}
+            <AppBar position="static" sx={{ backgroundColor: 'rgb(8 47 73)', borderBottom: '1px solid #e5e5e5' }} className='shadow-md'>
+                <Toolbar sx={{ justifyContent: 'space-between', flexWrap: 'wrap' }}>
+                    {/* Logo and Title */}
                     <Link href="/travel-gadgets">
                         <div className="flex items-center gap-2">
                             <Image
@@ -54,21 +41,20 @@ const GadgetsNavbar = () => {
                                 alt="Trek Explore Travel Logo"
                                 width={100}
                                 height={30}
-                                style={{ maxWidth: '100px', maxHeight: '40px' }} // Debugging: Ensure sizes are applied
+                                style={{ maxWidth: '100px', maxHeight: '40px' }}
                                 className="logo"
                             />
-                            <h1 className="text-xl lg:text-2xl font-bold poppins">Trek Explore Travel</h1>
+                            <Typography variant="h6" sx={{ display: { xs: 'none', md: 'block' } }} className="font-bold text-white">Trek Explore Travel</Typography>
                         </div>
                     </Link>
 
-                    {/* Search Bar */}
-                    <Box sx={{ maxWidth: '50%', flexGrow: 1, display: { xs: 'none', md: 'flex' }, mx: 2 }}>
+                    {/* Desktop Search Bar */}
+                    <Box sx={{ flexGrow: 1, maxWidth: '50%', display: { xs: 'none', md: 'flex' }, mx: 2 }}>
                         <Box
                             sx={{
                                 display: 'flex',
                                 alignItems: 'center',
                                 backgroundColor: 'white',
-                                padding: '0 10px',
                                 borderRadius: '4px',
                                 width: '100%',
                             }}
@@ -84,45 +70,50 @@ const GadgetsNavbar = () => {
                         </Box>
                     </Box>
 
-                    {/* Icons and Menu Button */}
+                    {/* Mobile Menu Button */}
                     <Box sx={{ display: { xs: 'flex', md: 'none' }, alignItems: 'center' }}>
                         <IconButton edge="start" color="inherit" aria-label="menu" onClick={toggleMenu}>
                             <MenuIcon />
                         </IconButton>
                     </Box>
 
+                    {/* Desktop Navbar Items */}
                     <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', gap: 2 }}>
-
-                        <Link href='/'>
+                        <Link href='/' className='text-sm text-white hover:underline'>
                             Home
                         </Link>
-
-
-                        <Link href='/login'>
-                            <Box sx={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-
-                                <FaUserEdit className='w-6 h-6 text-gray-300' />
-                                <Typography variant="body1" component="div">
-                                    Account Sign In
-                                </Typography>
-                            </Box>
+                        <span className="text-sm text-white mx-2">|</span>
+                        <Link href='/contactus' className='text-sm text-white hover:underline'>
+                            Support
                         </Link>
-
-
-                        <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                            <Typography variant="body1" component="div">
-                                Return & Orders
+                        <span className="text-sm text-white mx-2">|</span>
+                        <Typography variant="body1" className='text-sm text-white'>
+                            About Us
+                        </Typography>
+                        <span className="text-sm text-white mx-2">|</span>
+                        <Typography variant="body1" className='text-xs text-white'>
+                            Tracking Order
+                        </Typography>
+                        <span className="text-sm text-white mx-2">|</span>
+                        <Link href='/login' className='text-sm text-white flex items-center gap-1 hover:underline'>
+                            
+                            <Typography variant="body1">
+                                Sign In
                             </Typography>
-                        </Box>
-                        <IconButton aria-label="cart">
+                        </Link>
+                        <span className="text-sm text-white mx-2">|</span>
+                        <IconButton aria-label="cart" sx={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                             <Badge badgeContent={4} color="secondary">
                                 <ShoppingCartIcon />
                             </Badge>
+                            <Typography variant="body1" className='text-sm text-white'>
+                                Cart
+                            </Typography>
                         </IconButton>
                     </Box>
                 </Toolbar>
 
-                {/* Responsive Search and Menu */}
+                {/* Mobile Drawer */}
                 <Drawer anchor="top" open={menuOpen} onClose={toggleMenu}>
                     <List>
                         <ListItem>
@@ -146,42 +137,48 @@ const GadgetsNavbar = () => {
                                 </IconButton>
                             </Box>
                         </ListItem>
-
-
-
-                        <Link href="/">
-                            Home
-                        </Link>
-
-                        <Link href="/login" passHref>
-                            <IconButton component="a" aria-label="account">
-                                <AccountCircleIcon />
-                                <Typography variant="body1" sx={{ marginLeft: 1 }}>Account Sign In</Typography>
-                            </IconButton>
-                        </Link>
-
                         <ListItem>
-                            <Typography variant="body1">Return & Orders</Typography>
+                            <Link href="/" className='text-sm text-gray-800 hover:underline'>
+                                Home
+                            </Link>
                         </ListItem>
                         <ListItem>
-                            <IconButton aria-label="cart">
+                            <Link href="/login" className='text-sm text-gray-800 flex items-center gap-1 hover:underline'>
+                                <AccountCircleIcon />
+                                <Typography variant="body1">
+                                    Account Sign In
+                                </Typography>
+                            </Link>
+                        </ListItem>
+                        <ListItem>
+                            <Typography variant="body1" className='text-sm text-gray-800'>
+                                Return & Orders
+                            </Typography>
+                        </ListItem>
+                        <ListItem>
+                            <Link href='/login' className='text-sm text-gray-800 flex items-center gap-1 hover:underline'>
+                                <FaUserEdit className='w-5 h-5 text-gray-300' />
+                                <Typography variant="body1">
+                                    Sign In
+                                </Typography>
+                            </Link>
+                        </ListItem>
+                        <ListItem>
+                            <IconButton aria-label="cart" sx={{ display: 'flex', alignItems: 'center' }}>
                                 <Badge badgeContent={4} color="secondary">
                                     <ShoppingCartIcon />
                                 </Badge>
-                                <Typography variant="body1" sx={{ marginLeft: 1 }}>Cart</Typography>
+                                <Typography variant="body1" className='text-sm text-gray-800'>
+                                    Cart
+                                </Typography>
                             </IconButton>
                         </ListItem>
                     </List>
                 </Drawer>
             </AppBar>
-
-            {/* First AppBar End */}
-
-
+            {/* AppBar End */}
         </div>
-
     );
-
 };
 
 export default GadgetsNavbar;
