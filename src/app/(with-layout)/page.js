@@ -8,6 +8,7 @@ import CleanSafeAdventures from "../components/Home/CleanSafeAdventures/CleanSaf
 import TravelClub from "../components/Home/TravelClub/TravelClub";
 import FAQ from '../components/Home/FAQ/FAQ';
 import TravelBlogs from '../components/TravelBlogs/TravelBlogs';
+import EcommerceStore from '../components/Home/EcommerceStore/EcommerceStore';
 
 export default function Home() {
     return (
@@ -35,6 +36,7 @@ export default function Home() {
                 <UpcomingEvents />
                 <EventSystem />
                 <TravelClub />
+                <EcommerceStore />
                 <FAQ />
                 <TravelBlogs />
             </main>
