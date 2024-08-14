@@ -31,7 +31,7 @@ const Page = () => {
                         ছবি অথবা ভিডিওতে তুলে ধরুন অদেখা বাংলার রূপ
                     </h1>
 
-                    <div className=" flex justify-center">
+                    <div className="py-5 flex justify-center">
                         <CountDown />
                     </div>
 

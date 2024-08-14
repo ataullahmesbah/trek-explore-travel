@@ -111,8 +111,8 @@ body {
   font-family: sans-serif;
   text-align: center;
   padding: 40px;
- background-color: #000000;
- opacity: 0.30;
+ /* background-color: #000000; */
+ /* opacity: 0.30; */
  gap: 5px;
 }
 
