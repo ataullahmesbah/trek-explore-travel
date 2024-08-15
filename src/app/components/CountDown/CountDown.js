@@ -1,111 +1,53 @@
 'use client';
 
 import React, { useState, useEffect } from "react";
-import { CountdownCircleTimer } from "react-countdown-circle-timer";
 
-const minuteSeconds = 60;
-const hourSeconds = 3600;
-const daySeconds = 86400;
+const calculateTimeLeft = (targetDate) => {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
 
-const timerProps = {
-    isPlaying: true,
-    size: 120,
-    strokeWidth: 6
+    if (distance < 0) {
+        return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    return { days, hours, minutes, seconds };
 };
 
-const renderTime = (dimension, time) => (
-    <div className="time-wrapper">
-        <div className="time">{time}</div>
-        <div className="dimension">{dimension}</div>
-    </div>
-);
-
-const getTimeSeconds = (time) => (minuteSeconds - time) | 0;
-const getTimeMinutes = (time) => ((time % hourSeconds) / minuteSeconds) | 0;
-const getTimeHours = (time) => ((time % daySeconds) / hourSeconds) | 0;
-const getTimeDays = (time) => (time / daySeconds) | 0;
-
 export default function CountDown() {
-    const [currentTime, setCurrentTime] = useState(Date.now() / 1000);
-    const targetDate = new Date('2024-12-12T00:00:00').getTime() / 1000; // UNIX timestamp in seconds
-    const [remainingTime, setRemainingTime] = useState(targetDate - currentTime);
+    const targetDate = new Date('2024-12-12T00:00:00').getTime();
+    const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(targetDate));
 
     useEffect(() => {
-        // Update current time every second
         const timer = setInterval(() => {
-            setCurrentTime(Date.now() / 1000);
+            setTimeLeft(calculateTimeLeft(targetDate));
         }, 1000);
 
         return () => clearInterval(timer);
-    }, []);
-
-    useEffect(() => {
-        // Update remaining time
-        setRemainingTime(targetDate - currentTime);
-    }, [currentTime]);
-
-    const days = Math.ceil(remainingTime / daySeconds);
-    const daysDuration = days * daySeconds;
+    }, [targetDate]);
 
     return (
-        <div className="countdown-container ">
-            <CountdownCircleTimer
-                {...timerProps}
-                colors="#7E2E84"
-                duration={daysDuration}
-                initialRemainingTime={remainingTime}
-            >
-                {({ elapsedTime, color }) => (
-                    <span style={{ color }}>
-                        {renderTime("Days", getTimeDays(daysDuration - elapsedTime))}
-                    </span>
-                )}
-            </CountdownCircleTimer>
-            <CountdownCircleTimer
-                {...timerProps}
-                colors="#D14081"
-                duration={daySeconds}
-                initialRemainingTime={remainingTime % daySeconds}
-                onComplete={(totalElapsedTime) => ({
-                    shouldRepeat: remainingTime - totalElapsedTime > hourSeconds
-                })}
-            >
-                {({ elapsedTime, color }) => (
-                    <span style={{ color }}>
-                        {renderTime("Hours", getTimeHours(daySeconds - elapsedTime))}
-                    </span>
-                )}
-            </CountdownCircleTimer>
-            <CountdownCircleTimer
-                {...timerProps}
-                colors="#EF798A"
-                duration={hourSeconds}
-                initialRemainingTime={remainingTime % hourSeconds}
-                onComplete={(totalElapsedTime) => ({
-                    shouldRepeat: remainingTime - totalElapsedTime > minuteSeconds
-                })}
-            >
-                {({ elapsedTime, color }) => (
-                    <span style={{ color }}>
-                        {renderTime("Minutes", getTimeMinutes(hourSeconds - elapsedTime))}
-                    </span>
-                )}
-            </CountdownCircleTimer>
-            <CountdownCircleTimer
-                {...timerProps}
-                colors="#218380"
-                duration={minuteSeconds}
-                initialRemainingTime={remainingTime % minuteSeconds}
-                onComplete={(totalElapsedTime) => ({
-                    shouldRepeat: remainingTime - totalElapsedTime > 0
-                })}
-            >
-                {({ elapsedTime, color }) => (
-                    <span style={{ color }}>
-                        {renderTime("Seconds", getTimeSeconds(elapsedTime))}
-                    </span>
-                )}
-            </CountdownCircleTimer>
+        <div className="flex flex-wrap justify-center gap-4 p-4 max-w-full mx-auto rounded-lg ">
+            <div className="flex flex-col items-center bg-slate-900 shadow-xl opacity-75 p-4 rounded-lg w-24 h-24 sm:w-28 sm:h-28">
+                <div className="text-3xl sm:text-4xl font-bold text-white">{timeLeft.days}</div>
+                <div className="font-semibold text-gray-400 mt-1">Days</div>
+            </div>
+            <div className="flex flex-col items-center bg-slate-900 shadow-xl opacity-75 p-4 rounded-lg w-24 h-24 sm:w-28 sm:h-28">
+                <div className="text-3xl sm:text-4xl font-bold text-white">{timeLeft.hours}</div>
+                <div className="font-semibold text-gray-400 mt-1">Hours</div>
+            </div>
+            <div className="flex flex-col items-center bg-slate-900 shadow-xl opacity-75 p-4 rounded-lg w-24 h-24 sm:w-28 sm:h-28">
+                <div className="text-3xl sm:text-4xl font-bold text-white">{timeLeft.minutes}</div>
+                <div className="font-semibold text-gray-400 mt-1">Minutes</div>
+            </div>
+            <div className="flex flex-col items-center bg-slate-900 shadow-xl opacity-75 p-4 rounded-lg w-24 h-24 sm:w-28 sm:h-28">
+                <div className="text-3xl sm:text-4xl font-bold text-white">{timeLeft.seconds}</div>
+                <div className="font-semibold text-gray-400 mt-1">Seconds</div>
+            </div>
         </div>
     );
 }
