@@ -31,6 +31,8 @@ const LatestStories = () => {
                         <div className="border-b-2 w-1/3"></div>
                     </div>
 
+                    {/*  */}
+
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
                         {latestStories.map((story) => (
                             <div key={story._id} className="bg-white rounded-lg overflow-hidden shadow-md">
@@ -47,7 +49,7 @@ const LatestStories = () => {
                                 <div className="p-4">
                                     <h2 className="text-xl font-semibold mb-2">
                                         <Link href={`/story/${story._id}`} passHref>
-                                         
+                                         {story.title}
                                         </Link>
                                     </h2>
                                     <p className="text-gray-700">{story.description.slice(0, 100)}...</p>
