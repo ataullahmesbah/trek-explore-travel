@@ -97,7 +97,7 @@ const Navbar = () => {
               </div>
             )}
           </div>
-          <Link href="/travel-gadgets" legacyBehavior><a className="block px-4 py-2">Travel Gadgets</a></Link>
+          <Link href="/travel-gadgets" legacyBehavior><a className="block py-2">Travel Gadgets</a></Link>
           <Link href="/trip-album" legacyBehavior><a>Trip Album</a></Link>
           <Link href="/travelstories" legacyBehavior><a>Travel Stories</a></Link>
           <Link href="/blogs" legacyBehavior><a>Blogs</a></Link>
@@ -136,11 +136,11 @@ const Navbar = () => {
               {subMenuOpen.destination ? <FaCaretUp className="ml-1" /> : <FaCaretDown className="ml-1" />}
             </button>
             {subMenuOpen.destination && (
-              <div className="bg-sky-800 text-white p-2 rounded shadow-lg">
-                <Link href="/obk" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">Odekha Banglar Khoje</a></Link>
-                <Link href="/destination/nepal" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">Nepal</a></Link>
-                <Link href="/destination/india" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">India</a></Link>
-                <Link href="/destination/maldives" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">Maldives</a></Link>
+              <div className="bg-sky-900 opacity-85  rounded-lg text-white p-2 shadow-lg">
+                <Link href="/obk" legacyBehavior><a className="block py-1 hover:bg-sky-950 text-white rounded-md px-2">Odekha Banglar Khoje</a></Link>
+                <Link href="/destination/nepal" legacyBehavior><a className="block py-1 hover:bg-sky-950 text-white rounded-md px-2">Nepal</a></Link>
+                <Link href="/destination/india" legacyBehavior><a className="block py-1 hover:bg-sky-950 text-white rounded-md px-2">India</a></Link>
+                <Link href="/destination/maldives" legacyBehavior><a className="block py-1 hover:bg-sky-950 text-white rounded-md px-2">Maldives</a></Link>
               </div>
             )}
           </div>
