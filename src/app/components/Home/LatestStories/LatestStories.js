@@ -50,9 +50,9 @@ const LatestStories = () => {
                                     <h2 className="text-xl font-semibold mb-2">
                                         <Link href={`/story/${story._id}`} passHref>
 
-                                         {story.title}
+                                            {story.title}
 
-                                    
+
 
                                         </Link>
                                     </h2>

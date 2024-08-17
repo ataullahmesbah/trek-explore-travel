@@ -19,13 +19,13 @@ const TrekExploreTravelIcon = () => (
         xmlns="http://www.w3.org/2000/svg"
     >
         <circle cx="30" cy="30" r="28" stroke="black" strokeWidth="4" fill="white" />
-        <path 
-            d="M 15 45 L 30 25 L 45 45 Z" 
+        <path
+            d="M 15 45 L 30 25 L 45 45 Z"
             fill="sky"
         />
         <circle cx="40" cy="20" r="5" stroke="black" strokeWidth="2" fill="white" />
-        <path 
-            d="M 25 40 L 35 30 L 45 40 L 35 35 Z" 
+        <path
+            d="M 25 40 L 35 30 L 45 40 L 35 35 Z"
             fill="black"
         />
         <line x1="20" y1="50" x2="40" y2="50" stroke="black" strokeWidth="2" />
@@ -48,9 +48,16 @@ const LogIn = () => {
             {/* img optimize */}
             <div className="flex justify-center items-center text-center">
                 <div className="mx-auto m-4">
-                    {/* <FaAccessibleIcon /> */}
-
-                    <TrekExploreTravelIcon />
+                    <Image
+                        src='/images/logo.webp'
+                        alt='Odekha Banglar Khoje Logo'
+                        placeholder="blur"
+                        quality={100}
+                        width={200}
+                        height={200}
+                        blurDataURL="data:image/webp;base64,..." // Replace with actual base64 string
+                        className="mb-4 object-cover w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48"
+                    />
                 </div>
             </div>
             {/* img optimize */}

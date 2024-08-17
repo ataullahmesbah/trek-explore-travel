@@ -19,7 +19,16 @@ const SignUpPage = () => {
             {/* img optimize */}
             <div className="flex justify-center items-center text-center">
                 <div className="mx-auto m-4">
-                    <FaAccessibleIcon />
+                    <Image
+                        src='/images/logo.webp'
+                        alt='Odekha Banglar Khoje Logo'
+                        placeholder="blur"
+                        quality={100}
+                        width={200}
+                        height={200}
+                        blurDataURL="data:image/webp;base64,..." // Replace with actual base64 string
+                        className="mb-4 object-cover w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48"
+                    />
                 </div>
             </div>
 
