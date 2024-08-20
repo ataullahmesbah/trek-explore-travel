@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import ContainerPage from '../../container/page';
+import ContainerPage from '../../../container/page';
 import { useParams } from 'next/navigation';
 
 const LatestStoriesDynamic = () => {

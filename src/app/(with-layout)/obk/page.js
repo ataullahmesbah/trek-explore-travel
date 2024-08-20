@@ -33,19 +33,19 @@ const Page = () => {
                             width={200}
                             height={200}
                             blurDataURL="data:image/webp;base64,..." // Replace with actual base64 string
-                            className="mb-4 object-cover w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48"
+                            className="mb-2 lg:mb-4 object-cover w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48"
                         />
 
 
-                        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white bg-opacity-75 px-4 py-2 rounded-lg ">
+                        <h1 className="text-xl md:text-2xl lg:text-4xl font-bold text-white bg-opacity-75 px-4 py-2 rounded-lg ">
                             ছবি অথবা ভিডিওতে তুলে ধরুন অদেখা বাংলার রূপ
                         </h1>
 
-                        <div className="py-5">
+                        <div className="">
                             <CountDown />
                         </div>
 
-                        <button className="px-4 py-2 mt-4 bg-sky-700 text-white rounded hover:bg-sky-900 transition duration-300">
+                        <button className="px-4 py-2 lg:mt-4 bg-sky-700 text-white rounded hover:bg-sky-900 transition duration-300">
                             Vote Now
                         </button>
                     </div>
@@ -121,7 +121,7 @@ const Page = () => {
                                         width={500}
                                         height={400}
                                         blurDataURL="data:image/webp;base64,..." // Replace with actual base64 string
-                                       className="bg-gray-200 lg:w-[400px] lg:h-[500px] object-cover"
+                                        className="bg-gray-200 lg:w-[400px] lg:h-[500px] object-cover"
                                     />
                                 </div>
                                 <h5 className="text-xl font-semibold mb-2">তারেক অণু</h5>
