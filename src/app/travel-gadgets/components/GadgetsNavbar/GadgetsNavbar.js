@@ -28,10 +28,12 @@ const GadgetsNavbar = () => {
         setMenuOpen(!menuOpen);
     };
 
+
+
     return (
-        <div>
+        <div className=' w-full'>
             {/* AppBar Start */}
-            <AppBar position="static" sx={{ backgroundColor: 'rgb(8 47 73)', borderBottom: '1px solid #e5e5e5' }} className='shadow-md'>
+            <AppBar position="static" sx={{ backgroundColor: 'rgb(8 47 73)', }} className='shadow-md'>
                 <Toolbar sx={{ justifyContent: 'space-between', flexWrap: 'wrap' }}>
                     {/* Logo and Title */}
                     <Link href="/travel-gadgets">
@@ -44,7 +46,7 @@ const GadgetsNavbar = () => {
                                 style={{ maxWidth: '100px', maxHeight: '40px' }}
                                 className="logo"
                             />
-                            <Typography variant="h6" sx={{ display: { xs: 'none', md: 'block' } }} className="font-bold text-white">Trek Explore Travel</Typography>
+                            <Typography variant="h6" sx={{ display: { md: 'block' } }} className="font-bold text-white">Trek Explore Travel</Typography>
                         </div>
                     </Link>
 
@@ -96,7 +98,7 @@ const GadgetsNavbar = () => {
                         </Link>
                         <span className="text-xs text-white mx-2">|</span>
                         <Link href='/login' className='text-sm text-white flex items-center gap-1 hover:underline'>
-                            
+
                             <Typography variant="body1">
                                 Sign In
                             </Typography>
@@ -144,7 +146,7 @@ const GadgetsNavbar = () => {
                         </ListItem>
                         <ListItem>
                             <Link href="/login" className='text-sm text-gray-800 flex items-center gap-1 hover:underline'>
-                                <AccountCircleIcon />
+
                                 <Typography variant="body1">
                                     Account Sign In
                                 </Typography>
@@ -157,20 +159,21 @@ const GadgetsNavbar = () => {
                         </ListItem>
                         <ListItem>
                             <Link href='/login' className='text-sm text-gray-800 flex items-center gap-1 hover:underline'>
-                                <FaUserEdit className='w-5 h-5 text-gray-300' />
+
                                 <Typography variant="body1">
                                     Sign In
                                 </Typography>
                             </Link>
                         </ListItem>
                         <ListItem>
-                            <IconButton aria-label="cart" sx={{ display: 'flex', alignItems: 'center' }}>
-                                <Badge badgeContent={4} color="secondary">
-                                    <ShoppingCartIcon />
-                                </Badge>
+                            <IconButton aria-label="cart" sx={{ display: 'flex', }}>
+
                                 <Typography variant="body1" className='text-sm text-gray-800'>
                                     Cart
                                 </Typography>
+                                <Badge badgeContent={4} color="secondary">
+                                    <ShoppingCartIcon />
+                                </Badge>
                             </IconButton>
                         </ListItem>
                     </List>

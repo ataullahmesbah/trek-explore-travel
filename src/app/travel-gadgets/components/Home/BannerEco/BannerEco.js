@@ -28,7 +28,7 @@ const BannerEco = () => {
     }, []);
 
     return (
-        <div className="relative h-[calc(100vw*(2/3))] max-h-[500px] overflow-hidden">
+        <div className="relative h-[calc(100vw*(2/3))] max-h-[500px] overflow-hidden pt-16">
             <Swiper
                 modules={[Autoplay]}
                 spaceBetween={0}
@@ -45,9 +45,9 @@ const BannerEco = () => {
                                     src={banner.image}
                                     alt={banner.title}
                                     fill
-                                    style={{ objectFit: 'cover' }} // Use fill with objectFit for correct scaling
+                                    style={{ objectFit: 'cover' }} 
                                     placeholder="blur"
-                                    blurDataURL={banner.image} // Adjust if you have a separate low-res image for blurring
+                                    blurDataURL={banner.image} 
                                 />
                                 <div className="absolute inset-0 text-center bg-black bg-opacity-50 flex flex-col justify-center items-center">
                                     <h1 className="text-4xl md:text-6xl text-white font-bold mb-4">{banner.title}</h1>

@@ -1,13 +1,13 @@
-'use client'
+'use client';
 
-
-
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
+import { FaAtlas, FaLocationArrow, FaCaretDown, FaCaretUp } from 'react-icons/fa';
 
 const EcommerceNavbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [submenuOpen, setSubmenuOpen] = useState(false);
+    const submenuRef = useRef(null);
 
     const handleMenuToggle = () => {
         setMenuOpen(!menuOpen);
@@ -17,28 +17,47 @@ const EcommerceNavbar = () => {
         setSubmenuOpen(!submenuOpen);
     };
 
+    // Close submenu when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (submenuRef.current && !submenuRef.current.contains(event.target)) {
+                setSubmenuOpen(false);
+            }
+        };
+
+        // Add event listener
+        document.addEventListener('mousedown', handleClickOutside);
+
+        // Clean up event listener
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
+
     return (
-        <nav className="bg-white border-b shadow-sm fixed w-full z-10">
+        <nav className="bg-gray-300 border-b fixed w-full z-50 ">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
+                    {/* Left Side Links */}
                     <div className="flex items-center">
-                        <Link href="/" className="flex-shrink-0">
-                            <img className="h-8" src="/logo.png" alt="Logo" />
-                        </Link>
                         <div className="hidden md:block">
-                            <div className="ml-10 flex items-baseline space-x-4">
-                                <Link href="/platform" className="hover:text-blue-700">Platform</Link>
-                                <Link href="/solutions" className="hover:text-blue-700">Solutions</Link>
-                                <Link href="/developers" className="hover:text-blue-700">Developers</Link>
-                                <Link href="/resources" className="hover:text-blue-700">Resources</Link>
-                                <Link href="/about-us" className="hover:text-blue-700">About Us</Link>
-                                <Link href="/pricing" className="hover:text-blue-700">Pricing</Link>
-                                <div className="relative">
-                                    <button onClick={handleSubmenuToggle} className="hover:text-blue-700 focus:outline-none">
-                                        More
+                            <div className="ml-10 flex items-center space-x-4">
+                                <Link href="/platform" className="hover:text-blue-700 flex items-center gap-2">
+                                    <FaAtlas />
+                                    All Categories
+                                </Link>
+                                <Link href="/solutions" className="hover:text-blue-700">T-Shirt</Link>
+                                <Link href="/developers" className="hover:text-blue-700">Men</Link>
+                                <Link href="/resources" className="hover:text-blue-700">Backpacks</Link>
+                                <Link href="/resources" className="hover:text-blue-700">Kids</Link>
+                                <Link href="/about-us" className="hover:text-blue-700">New Arrivals</Link>
+                                <Link href="/pricing" className="hover:text-blue-700">Flash Sale</Link>
+                                <div className="relative" ref={submenuRef}>
+                                    <button onClick={handleSubmenuToggle} className="hover:text-blue-700 focus:outline-none flex items-center gap-1">
+                                        Travel Gear {submenuOpen ? <FaCaretUp /> : <FaCaretDown />}
                                     </button>
                                     {submenuOpen && (
-                                        <div className="absolute left-0 w-48 bg-white shadow-lg">
+                                        <div className="absolute left-0 w-48 bg-white shadow-lg mt-2 z-20">
                                             <Link href="/contact" className="block px-4 py-2 hover:bg-gray-100">Contact</Link>
                                             <Link href="/support" className="block px-4 py-2 hover:bg-gray-100">Support</Link>
                                             <Link href="/documentation" className="block px-4 py-2 hover:bg-gray-100">Documentation</Link>
@@ -49,11 +68,17 @@ const EcommerceNavbar = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="hidden md:block">
-                        <button className="ml-4 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600">
-                            Sign Up for Free
-                        </button>
+
+                    {/* Right Side Delivery Info */}
+                    <div className="flex gap-2 items-center">
+                        <FaLocationArrow />
+                        <h6>
+                            <span className='font-semibold'>Delivery: </span>
+                            <span className='font-semibold text-gray-800'>Bangladesh</span>
+                        </h6>
                     </div>
+
+                    {/* Mobile Menu Toggle Button */}
                     <div className="-mr-2 flex md:hidden">
                         <button
                             onClick={handleMenuToggle}
@@ -81,32 +106,29 @@ const EcommerceNavbar = () => {
                 </div>
             </div>
 
+            {/* Mobile Menu */}
             <div className={`md:hidden ${menuOpen ? 'block' : 'hidden'}`}>
-                <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                    <Link href="/platform" className="block px-3 py-2 rounded-md text-base font-medium hover:text-blue-700">Platform</Link>
-                    <Link href="/solutions" className="block px-3 py-2 rounded-md text-base font-medium hover:text-blue-700">Solutions</Link>
-                    <Link href="/developers" className="block px-3 py-2 rounded-md text-base font-medium hover:text-blue-700">Developers</Link>
-                    <Link href="/resources" className="block px-3 py-2 rounded-md text-base font-medium hover:text-blue-700">Resources</Link>
-                    <Link href="/about-us" className="block px-3 py-2 rounded-md text-base font-medium hover:text-blue-700">About Us</Link>
-                    <Link href="/pricing" className="block px-3 py-2 rounded-md text-base font-medium hover:text-blue-700">Pricing</Link>
-                    <div className="relative">
-                        <button onClick={handleSubmenuToggle} className="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:text-blue-700 focus:outline-none">
-                            More
+                <div className="px-4 pt-4 pb-3 space-y-1">
+                    <Link href="/platform" className="block px-4 py-2 hover:bg-gray-100">All Categories</Link>
+                    <Link href="/solutions" className="block px-4 py-2 hover:bg-gray-100">T-Shirt</Link>
+                    <Link href="/developers" className="block px-4 py-2 hover:bg-gray-100">Men</Link>
+                    <Link href="/resources" className="block px-4 py-2 hover:bg-gray-100">Backpacks</Link>
+                    <Link href="/resources" className="block px-4 py-2 hover:bg-gray-100">Kids</Link>
+                    <Link href="/about-us" className="block px-4 py-2 hover:bg-gray-100">New Arrivals</Link>
+                    <Link href="/pricing" className="block px-4 py-2 hover:bg-gray-100">Flash Sale</Link>
+                    <div className="relative" ref={submenuRef}>
+                        <button onClick={handleSubmenuToggle} className="flex items-center gap-1 w-full px-4 py-2 hover:bg-gray-100">
+                            Travel Gear {submenuOpen ? <FaCaretUp /> : <FaCaretDown />}
                         </button>
                         {submenuOpen && (
-                            <div className="px-3 py-2">
-                                <Link href="/contact" className="block px-3 py-2 rounded-md text-base font-medium hover:text-blue-700">Contact</Link>
-                                <Link href="/support" className="block px-3 py-2 rounded-md text-base font-medium hover:text-blue-700">Support</Link>
-                                <Link href="/documentation" className="block px-3 py-2 rounded-md text-base font-medium hover:text-blue-700">Documentation</Link>
-                                <Link href="/login" className="block px-3 py-2 rounded-md text-base font-medium hover:text-blue-700">Login</Link>
+                            <div className="bg-white shadow-lg">
+                                <Link href="/contact" className="block px-4 py-2 hover:bg-gray-100">Contact</Link>
+                                <Link href="/support" className="block px-4 py-2 hover:bg-gray-100">Support</Link>
+                                <Link href="/documentation" className="block px-4 py-2 hover:bg-gray-100">Documentation</Link>
+                                <Link href="/login" className="block px-4 py-2 hover:bg-gray-100">Login</Link>
                             </div>
                         )}
                     </div>
-                </div>
-                <div className="px-5 pt-4 pb-5">
-                    <button className="block w-full text-center px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600">
-                        Sign Up for Free
-                    </button>
                 </div>
             </div>
         </nav>
