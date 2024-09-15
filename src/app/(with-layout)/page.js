@@ -32,11 +32,11 @@ export default function Home() {
                 <Banner />
                 <LatestStories />
                 <TravelPlan />
-                <CleanSafeAdventures />
                 <UpcomingEvents />
+                <EcommerceStore />
+                <CleanSafeAdventures />
                 <EventSystem />
                 <TravelClub />
-                <EcommerceStore />
                 <FAQ />
                 <TravelBlogs />
             </main>
