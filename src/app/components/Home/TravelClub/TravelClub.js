@@ -1,50 +1,55 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; // Import the CSS for toast styling
 
 // Modal component for email subscription
 const SubscribeModal = ({ isOpen, onClose }) => {
+    const modalRef = useRef();
+
+    // Close modal when clicking outside the content
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (modalRef.current && !modalRef.current.contains(event.target)) {
+                onClose();
+            }
+        };
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, [onClose]);
+
     if (!isOpen) return null;
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70">
-            <div className="bg-white rounded-lg p-8 max-w-sm w-full shadow-xl">
-                <h2 className="text-2xl font-semibold mb-4 text-center">Subscribe to Our Club</h2>
-                
-             
-             
-                <form 
-                className='flex gap-2 items-center text-center'
+            <div
+                ref={modalRef}
+                className="bg-gray-800 rounded-lg p-4 max-w-sm w-full shadow-xl mx-4"
+            >
+                <form
+                    className="flex flex-col sm:flex-row gap-2 items-center justify-center text-center"
                     onSubmit={(e) => {
                         e.preventDefault();
-                        // Handle form submission (e.g., send email to a service)
-                        console.log('Subscribed!');
+                        // Show a toast notification
+                        toast.success('Successfully subscribed!');
                         onClose(); // Close the modal after submission
-                        
                     }}
                 >
                     <input
                         type="email"
                         placeholder="Enter your email"
-                        className="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none"
+                        className="w-full bg-sky-900 bg-opacity-20 text-white px-4 py-2 border rounded-md focus:outline-none"
                         required
                     />
                     <button
                         type="submit"
-                        className="w-full bg-sky-900 text-white py-2 rounded-md hover:bg-sky-700 transition duration-300"
+                        className="border-2 bg-sky-900 bg-opacity-20 border-sky-900 text-white p-1 px-4 rounded-md shadow-2xl hover:bg-sky-900 transition duration-300"
                     >
                         Subscribe
                     </button>
                 </form>
-
-
-                <button
-                    onClick={onClose}
-                    className="mt-4 text-center text-sky-900 hover:underline w-full"
-                >
-                    Cancel
-                </button>
             </div>
         </div>
     );
@@ -87,6 +92,9 @@ const TravelClub = () => {
 
             {/* Modal Component */}
             <SubscribeModal isOpen={isModalOpen} onClose={closeModal} />
+
+            {/* ToastContainer for displaying toasts */}
+            <ToastContainer />
         </div>
     );
 };
