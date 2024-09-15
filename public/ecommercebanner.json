@@ -1,0 +1,14 @@
+[
+    {
+        "image": "https://i.ibb.co/svM1TLR/image.png",
+        "link": "/shop",
+        "title": "PLAN YOUR ADVENTURE",
+        "buttonText": "SHOP NOW"
+    },
+    {
+        "image": "https://i.ibb.co/svM1TLR/image.png",
+        "link": "/explore",
+        "title": "EXPLORE THE WORLD",
+        "buttonText": "EXPLORE NOW"
+    }
+]
