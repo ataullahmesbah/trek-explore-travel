@@ -9,6 +9,7 @@ import TravelClub from "../components/Home/TravelClub/TravelClub";
 import FAQ from '../components/Home/FAQ/FAQ';
 import TravelBlogs from '../components/TravelBlogs/TravelBlogs';
 import EcommerceStore from '../components/Home/EcommerceStore/EcommerceStore';
+import NewsLetter from '../components/Home/NewsLetter/NewsLetter';
 
 export default function Home() {
     return (
@@ -39,6 +40,7 @@ export default function Home() {
                 <TravelClub />
                 <FAQ />
                 <TravelBlogs />
+                <NewsLetter />
             </main>
         </>
     );

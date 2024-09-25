@@ -39,7 +39,7 @@ const SubscribeModal = ({ isOpen, onClose }) => {
                 >
                     <input
                         type="email"
-                        placeholder="Enter your email"
+                        placeholder="Email Address"
                         className="w-full bg-sky-900 bg-opacity-20 text-white px-4 py-2 border rounded-md focus:outline-none"
                         required
                     />
