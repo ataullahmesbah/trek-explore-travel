@@ -1,32 +1,12 @@
 'use client';
 
 import emailjs from '@emailjs/browser';
+import Link from 'next/link';
 import React, { useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast'; // Import react-hot-toast
 
 export const metadata = {
-    title: 'Contact Us - Trek Explore Travel',
-    description: 'Get in touch with Trek Explore Travel for personalized travel packages, expert guides, and unforgettable travel experiences. We are here to help you plan your next adventure.',
-    keywords: 'Trek Explore Travel, contact us, travel inquiries, travel support, personalized travel packages',
-    openGraph: {
-        title: 'Contact Us - Trek Explore Travel',
-        description: 'Get in touch with Trek Explore Travel for personalized travel packages, expert guides, and unforgettable travel experiences. We are here to help you plan your next adventure.',
-        type: 'website',
-        url: 'https://www.trekexploretravel.com/contact',
-        images: [
-            {
-                url: 'https://www.trekexploretravel.com/og-contact.jpg',
-                width: 800,
-                height: 600,
-                alt: 'Contact Trek Explore Travel',
-            },
-        ],
-    },
-    twitter: {
-        card: 'summary_large_image',
-        title: 'Contact Us - Trek Explore Travel',
-        description: 'Get in touch with Trek Explore Travel for personalized travel packages, expert guides, and unforgettable travel experiences. We are here to help you plan your next adventure.',
-        image: 'https://www.trekexploretravel.com/twitter-contact.jpg',
-    },
+    // Metadata details
 };
 
 const ContactUs = () => {
@@ -47,8 +27,6 @@ const ContactUs = () => {
         }));
     };
 
-
-
     const validateForm = () => {
         const errors = {};
         if (!form.name.trim()) {
@@ -65,28 +43,32 @@ const ContactUs = () => {
         return errors;
     };
 
-
     const handleSubmit = (e) => {
         e.preventDefault();
         const errors = validateForm();
         if (Object.keys(errors).length === 0) {
             emailjs.send(
-                'service_2p9innf',  // Replace with your EmailJS service ID
-                'template_grt5q3s', // Replace with your EmailJS template ID
+                'service_2p9innf',
+                'template_grt5q3s',
                 {
                     to_name: form.name,
                     from_name: form.email,
                     message: form.message
                 },
-                '6i4BgDWrdCgrRbvt7' // Replace with your EmailJS user ID
+                '6i4BgDWrdCgrRbvt7'
             ).then((result) => {
-                console.log('Form submitted', result.text);
                 setFormSubmitted(true);
                 setForm({ name: '', email: '', message: '' });
                 setError('');
+
+                // Show success toast when form is submitted
+                toast.success('Message sent successfully!');
             }).catch((error) => {
                 console.error('Error submitting form', error.text);
                 setError('Failed to send message, please try again later.');
+
+                // Show error toast if something goes wrong
+                toast.error('Failed to send message.');
             });
         } else {
             setFormErrors(errors);
@@ -94,36 +76,40 @@ const ContactUs = () => {
     };
 
 
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     const errors = validateForm();
-    //     if (Object.keys(errors).length === 0) {
-    //         emailjs.send(
-    //             '',  // Replace with your EmailJS service ID
-    //             '', // Replace with your EmailJS template ID
-    //             {
-    //                 to_name: form.name,
-    //                 from_name: form.email,
-    //                 message: form.message
-    //             },
-    //             '' // Replace with your EmailJS user ID
-    //         ).then((result) => {
-    //             console.log('Form submitted', result.text);
-    //             setFormSubmitted(true);
-    //             setForm({ name: '', email: '', message: '' });
-    //             setError('');
-    //         }).catch((error) => {
-    //             console.error('Error submitting form', error.text);
-    //             setError('Failed to send message, please try again later.');
-    //         });
-    //     } else {
-    //         setFormErrors(errors);
-    //     }
-    // };
-
     return (
-        <div className="bg-gray-50 px-4 sm:px-6 lg:px-8 py-20">
-            <div className="max-w-7xl mx-auto">
+        <div className="bg-gray-50  py-14">
+             {/* Toast Container */}
+             <Toaster position="top-right" reverseOrder={false} />
+
+            {/* Banner Section */}
+            <div className='bg-gradient-to-r from-sky-800 via-sky-950 to-sky-700 py-16 shadow-md shad'>
+                <div className="max-w-7xl mx-auto rounded-lg p-6 lg:p-12 space-y-6 poppins-regular">
+                    {/* Breadcrumb Links */}
+                    <div className=" mb-4 flex justify-center space-x-4 text-white">
+                        {/* Add Next.js Links for Home and Contact */}
+                        <Link href="/" className="hover:underline">
+                            Home
+                        </Link>
+                        <span>||</span>
+                        <Link href="/contactus" className="hover:underline">
+                            Contact
+                        </Link>
+                    </div>
+
+                    {/* Title and Description */}
+                    <div className="text-center mb-6 lg:mb-0 text-white space-y-6">
+                        <h2 className="text-3xl lg:text-5xl font-bold ">
+                            Let’s Start a Conversation
+                        </h2>
+                        <p className="mt-4 text-lg lg:text-xl text-gray-100">
+                            Have any questions or want to connect? Feel free to reach out. I’m here to help!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
                 <h1 className="text-4xl font-semibold mb-6 text-center">Contact Us</h1>
                 <p className="text-center mb-12 text-base sm:text-lg md:text-xl text-gray-700">
                     We’d love to hear from you! Whether you have a question about features, pricing, or anything else, our team is ready to answer all your questions.
