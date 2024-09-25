@@ -106,7 +106,7 @@ const EcommerceNavbar = () => {
 
 
                 {/* Right Side Delivery Info */}
-                <div className="flex gap-2 items-center">
+                <div className="flex gap-2 items-center ">
                     <FaLocationArrow />
                     <h6>
                         <span className='font-semibold'>Delivery: </span>

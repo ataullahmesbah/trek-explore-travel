@@ -52,23 +52,23 @@ const Footer = () => {
                     <div className="w-full sm:w-1/2 lg:w-1/4 mb-6 lg:mb-0">
                         <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
                         <div className="flex space-x-4">
-                            <a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-gray-400">
+                            <a href="https://www.facebook.com/mesbahoffwego" target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-gray-400">
                                 <FaFacebook size={24} />
                             </a>
-                            <a href="https://www.youtube.com/yourchannel" target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-gray-400">
+                            <a href="https://www.youtube.com/@mesbahoffwego" target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-gray-400">
                                 <FaYoutube size={24} />
                             </a>
-                            <a href="https://www.instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-gray-400">
+                            <a href="https://www.instagram.com/mesbahoffwego" target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-gray-400">
                                 <FaInstagram size={24} />
                             </a>
-                            <a href="https://www.twitter.com/yourprofile" target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-gray-400">
+                            <a href="https://www.twitter.com/ataullah_mesbah" target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-gray-400">
                                 <FaTwitter size={24} />
                             </a>
-                            <a href="https://www.linkedin.com/yourprofile" target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-gray-400">
-                                <FaLinkedin size={24} />
-                            </a>
+
                         </div>
                     </div>
+
+                    
                 </div>
                 {/* Bottom Line */}
                 <div className="border-t border-gray-700 mt-8 pt-6 text-center">
