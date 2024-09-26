@@ -8,6 +8,7 @@ import nature1 from '/public/images/nature22.png'
 import nature2 from '/public/images/nature.png'
 import nature3 from '/public/images/nature2.png'
 import { FaFacebook, FaYoutube, FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import AboutTrek from '../../components/AboutTrek/AboutTrek';
 
 import Link from 'next/link';
 
@@ -95,61 +96,9 @@ const AboutUs = () => {
             </div>
 
             {/* 4th Section - Why Choose Trek Explore Travel */}
-            <div className="bg-gray-200 py-16 px-6 md:px-20 lg:px-32">
-                <div className="max-w-5xl mx-auto text-center">
-                    {/* Section Title */}
-                    <div className="flex items-center space-x-4 justify-center">
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 relative inline-block">
-                            <span className="relative z-10">More About</span>
-                            <span className="absolute left-0 bottom-0 w-full h-1 bg-gradient-to-r from-sky-700 to-sky-300"></span>
-                        </h2>
 
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                            Trek Explore Travel
-                        </h2>
-                    </div>
+            <AboutTrek />
 
-                    {/* Section Description */}
-                    <p className="text-lg text-gray-700 mb-6">
-                        Discover breathtaking landscapes, hidden gems, and untold stories of nature with Trek Explore Travel. Hereu’s why adventurers choose us for their ultimate outdoor experiences:
-                    </p>
-
-                    {/* Key Reasons Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {/* Expert Destination Guides */}
-                        <div className="bg-white p-6 shadow-lg rounded-md">
-                            <h4 className="text-xl font-bold text-gray-900 mb-4">Expert Destination Guides</h4>
-                            <p className="text-gray-700">
-                                Our experienced guides unlock the secrets of the wild, taking you to off-the-beaten-path destinations and natureu’s hidden wonders.
-                            </p>
-                        </div>
-
-                        {/* Exclusive Nature Spots */}
-                        <div className="bg-white p-6 shadow-lg rounded-md">
-                            <h4 className="text-xl font-bold text-gray-900 mb-4">Exclusive Nature Spots</h4>
-                            <p className="text-gray-700">
-                                We uncover the worldu’s hidden natural beauty, from remote mountain peaks to secret beaches and uncharted forests.
-                            </p>
-                        </div>
-
-                        {/* Sustainable Adventure */}
-                        <div className="bg-white p-6 shadow-lg rounded-md">
-                            <h4 className="text-xl font-bold text-gray-900 mb-4">Sustainable Adventure</h4>
-                            <p className="text-gray-700">
-                                We prioritize eco-friendly travel, ensuring minimal impact on the environment while immersing you in the heart of natureu’s splendor.
-                            </p>
-                        </div>
-
-                        {/* Authentic Cultural Experiences */}
-                        <div className="bg-white p-6 shadow-lg rounded-md">
-                            <h4 className="text-xl font-bold text-gray-900 mb-4">Authentic Cultural Experiences</h4>
-                            <p className="text-gray-700">
-                                Connect with local communities and cultures as we guide you through natural wonders and their fascinating human histories.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             {/* Image section */}
 
