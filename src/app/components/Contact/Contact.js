@@ -3,7 +3,8 @@
 import emailjs from '@emailjs/browser';
 import Link from 'next/link';
 import React, { useState } from 'react';
-import toast, { Toaster } from 'react-hot-toast'; // Import react-hot-toast
+import toast, { Toaster } from 'react-hot-toast';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 
 export const metadata = {
     // Metadata details
@@ -78,8 +79,8 @@ const ContactUs = () => {
 
     return (
         <div className="bg-gray-50  py-14">
-             {/* Toast Container */}
-             <Toaster position="top-right" reverseOrder={false} />
+            {/* Toast Container */}
+            <Toaster position="top-right" reverseOrder={false} />
 
             {/* Banner Section */}
             <div className='bg-gradient-to-r from-sky-800 via-sky-950 to-sky-700 py-16 shadow-md shad'>
@@ -108,7 +109,7 @@ const ContactUs = () => {
                 </div>
             </div>
 
-            
+
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
                 <h1 className="text-4xl font-semibold mb-6 text-center">Contact Us</h1>
                 <p className="text-center mb-12 text-base sm:text-lg md:text-xl text-gray-700">
@@ -184,13 +185,43 @@ const ContactUs = () => {
                         </div>
                     </form>
                 </div>
-                <div className="mt-12 text-center">
-                    <h2 className="text-2xl font-semibold mb-4">Our Contact Information</h2>
-                    <p className="text-base sm:text-lg text-gray-700">Email: info@trekexploretravel.com</p>
-                    <p className="text-base sm:text-lg text-gray-700">Phone: (123) 456-7890</p>
-                    <p className="text-base sm:text-lg text-gray-700">Address: 123 Your Street, Your City, Your State, Your Country</p>
+            </div>
+
+            {/* More Contact Info */}
+            <div className='bg-gray-100 mt-10'>
+                <div className=" py-16 px-6 md:px-20 lg:px-24 ">
+                    <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {/* Email Card */}
+                        <div className="bg-white p-6 shadow-lg rounded-md">
+                            <FaEnvelope className="text-3xl text-gray-800 mb-4" />
+                            <h4 className="text-xl font-bold text-gray-900 mb-2">Email</h4>
+                            <p className="text-gray-700 mb-4">info@trekexploretravel.com</p>
+                            <button className="bg-black text-white py-2 px-4 rounded-full mb-2 mt-0">CONTACT</button>
+
+                        </div>
+
+                        {/* Phone Card */}
+                        <div className="bg-white p-6 shadow-lg rounded-md">
+                            <FaPhone className="text-3xl text-gray-800 mb-4" />
+                            <h4 className="text-xl font-bold text-gray-900 mb-2">Phone</h4>
+                            <p className="text-gray-700 mb-4">+8809638844036</p>
+                            <button className="bg-black text-white py-2 px-4 rounded-full mb-2">CALL</button>
+
+                        </div>
+
+                        {/* Location Card */}
+                        <div className="bg-white p-6 shadow-lg rounded-md">
+                            <FaMapMarkerAlt className="text-3xl text-gray-800 mb-4" />
+                            <h4 className="text-xl font-bold text-gray-900 mb-2">Office</h4>
+                            <p className="text-gray-700 mb-4">Road No. 08, 2/B J-Block Baridhara, Dhaka 1212</p>
+                            <button className="bg-black text-white py-2 px-4 rounded-full mb-2">LOCATION</button>
+
+                        </div>
+                    </div>
                 </div>
             </div>
+
+
         </div>
     );
 };

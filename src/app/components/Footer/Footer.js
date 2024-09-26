@@ -46,7 +46,7 @@ const Footer = () => {
                     <div className="w-full sm:w-1/2 lg:w-1/4 mb-6 lg:mb-0">
                         <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
                         <p className="text-gray-200">Email: info@trekexploretravel.com</p>
-                        <p className="text-gray-200">Phone: +123 456 7890</p>
+                        <p className="text-gray-200">Phone: +8809638844036</p>
                     </div>
                     {/* Social Media */}
                     <div className="w-full sm:w-1/2 lg:w-1/4 mb-6 lg:mb-0">
