@@ -10,6 +10,7 @@ import FAQ from '../components/Home/FAQ/FAQ';
 import TravelBlogs from '../components/TravelBlogs/TravelBlogs';
 import EcommerceStore from '../components/Home/EcommerceStore/EcommerceStore';
 import NewsLetter from '../components/Home/NewsLetter/NewsLetter';
+import News from '../components/Home/News/News';
 
 export default function Home() {
     return (
@@ -41,6 +42,7 @@ export default function Home() {
                 <FAQ />
                 <TravelBlogs />
                 <NewsLetter />
+             
             </main>
         </>
     );
