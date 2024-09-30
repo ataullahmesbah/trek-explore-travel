@@ -99,7 +99,7 @@ const ContactUs = () => {
 
                     {/* Title and Description */}
                     <div className="text-center mb-6 lg:mb-0 text-white space-y-6">
-                        <h2 className="text-3xl lg:text-5xl font-bold ">
+                        <h2 className="title">
                             Let’s Start a Conversation
                         </h2>
                         <p className="mt-4 text-lg lg:text-xl text-gray-100">
@@ -111,7 +111,7 @@ const ContactUs = () => {
 
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-                <h1 className="text-4xl font-semibold mb-6 text-center">Contact Us</h1>
+                <h1 className="title mb-6 text-center">Contact Us</h1>
                 <p className="text-center mb-12 text-base sm:text-lg md:text-xl text-gray-700">
                     We’d love to hear from you! Whether you have a question about features, pricing, or anything else, our team is ready to answer all your questions.
                 </p>
